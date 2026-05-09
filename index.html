@@ -1,0 +1,1947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patiala Fashion — Punjabi Suits | Ratia, Haryana</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --maroon:#7b1c35;--maroon-deep:#4e0f1f;--maroon-soft:#f5e8ec;--maroon-mid:#b83050;
+  --gold:#c9943a;--gold-light:#f7f0e2;--cream:#fefaf6;--ivory:#fffdf9;
+  --text:#1e0e14;--muted:#7a5460;--border:#e8d0d8;--white:#ffffff;
+  --green:#1a6b35;--green-soft:#eaf6ee;--green-border:#a3d9b1;
+}
+html{scroll-behavior:smooth}
+body{min-height:100vh;background:var(--cream);color:var(--text);font-family:'Outfit',sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--cream)}::-webkit-scrollbar-thumb{background:var(--maroon-mid);border-radius:3px}
+
+/* ── NAV ── */
+nav{background:var(--maroon-deep);padding:0 1.5rem;position:sticky;top:0;z-index:300;box-shadow:0 2px 20px rgba(78,15,31,.4)}
+.nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;flex-direction:column;cursor:pointer}
+.brand-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--gold);letter-spacing:.5px;line-height:1.1;white-space:nowrap}
+.brand-sub{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);white-space:nowrap}
+.nav-links{display:flex;align-items:center;gap:2px}
+.nav-link{color:rgba(255,255,255,.7);font-size:13px;padding:7px 14px;border-radius:50px;cursor:pointer;transition:all .2s;border:none;background:none;font-family:'Outfit',sans-serif}
+.nav-link:hover,.nav-link.active{color:#fff;background:rgba(255,255,255,.12)}
+.nav-right{display:flex;align-items:center;gap:10px}
+.cart-btn{position:relative;background:var(--gold);color:var(--maroon-deep);border:none;width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:16px;display:flex;align-items:center;justify-content:center;transition:transform .2s;flex-shrink:0}
+.cart-dot{position:absolute;top:-3px;right:-3px;background:#fff;color:var(--maroon);border-radius:50%;width:17px;height:17px;font-size:9px;font-weight:700;display:flex;align-items:center;justify-content:center;border:2px solid var(--maroon-deep)}
+.admin-trigger{background:none;border:none;color:rgba(255,255,255,.2);cursor:pointer;font-size:12px;padding:5px 8px;border-radius:8px;font-family:'Outfit',sans-serif}
+.admin-trigger:hover{color:rgba(255,255,255,.6)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:rgba(255,255,255,.8);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{display:none;background:rgba(30,8,16,.97);max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+.mobile-menu.open{max-height:320px;padding:.75rem 1.5rem 1rem}
+.mobile-menu .nav-link{display:block;width:100%;text-align:left;padding:11px 14px;font-size:14px;border-radius:10px;margin-bottom:2px}
+
+/* ── ADMIN BAR ── */
+.admin-bar{background:var(--maroon-soft);border-bottom:2px solid var(--maroon-mid);padding:8px 1.5rem;display:none;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px}
+.admin-bar.show{display:flex}
+.ab-logout{background:var(--maroon);color:#fff;border:none;padding:6px 16px;border-radius:50px;font-size:12px;cursor:pointer;font-family:'Outfit',sans-serif}
+
+/* ── MODAL ── */
+.modal-overlay{display:none;position:fixed;inset:0;background:rgba(30,14,20,.65);z-index:500;align-items:center;justify-content:center;padding:1rem;backdrop-filter:blur(4px)}
+.modal-overlay.open{display:flex}
+.modal-box{background:var(--white);border-radius:20px;padding:2rem;width:100%;max-width:400px;position:relative;border:1px solid var(--border)}
+.modal-box.wide{max-width:540px;max-height:88vh;overflow-y:auto}
+.modal-box.wider{max-width:580px;max-height:88vh;overflow-y:auto}
+.lm-close{position:absolute;top:12px;right:12px;background:none;border:none;font-size:20px;cursor:pointer;color:var(--muted);width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.lm-close:hover{background:var(--maroon-soft);color:var(--maroon)}
+.lm-icon{width:56px;height:56px;border-radius:50%;background:var(--maroon-soft);border:2px solid var(--maroon-mid);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 1rem}
+.lm-title{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;text-align:center;margin-bottom:.3rem}
+.lm-sub{font-size:13px;color:var(--muted);text-align:center;margin-bottom:1.5rem;font-weight:300}
+.lm-fg{margin-bottom:1rem}
+.lm-fg label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:500;margin-bottom:5px}
+.lm-fg input{width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:12px;font-size:15px;font-family:'Outfit',sans-serif;outline:none;transition:border .2s;background:var(--ivory)}
+.lm-fg input:focus{border-color:var(--maroon);background:#fff}
+.lm-btn{width:100%;background:var(--maroon);color:#fff;border:none;padding:13px;border-radius:50px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;margin-top:.25rem;transition:background .2s}
+.lm-btn:hover{background:var(--maroon-deep)}
+.lm-error{background:#fcebeb;border:1px solid #f09595;border-radius:10px;padding:9px 13px;font-size:13px;color:#a32d2d;margin-bottom:1rem;display:none}
+
+/* ── PAGES ── */
+.page{display:none}
+.page.active{display:block;animation:fadeUp .3s ease}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}
+@keyframes cartBounce{0%,100%{transform:scale(1)}50%{transform:scale(1.28)}}
+@keyframes popIn{0%{transform:scale(.4);opacity:0}70%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+
+/* ── INFO STRIP ── */
+.info-strip{background:var(--gold-light);border-bottom:1px solid var(--border)}
+.strip-track{display:flex;justify-content:center;gap:2.5rem;padding:9px 1.5rem;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.strip-track::-webkit-scrollbar{display:none}
+.strip-item{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);white-space:nowrap;flex-shrink:0}
+.strip-item strong{color:var(--text);font-weight:500}
+
+/* ── HERO ── */
+.hero{background:var(--maroon-deep);padding:4rem 1.5rem 3.5rem;text-align:center;position:relative;overflow:hidden}
+.hero-pattern{position:absolute;inset:0;opacity:.06;background-image:repeating-linear-gradient(45deg,var(--gold) 0,var(--gold) 1px,transparent 0,transparent 50%);background-size:18px 18px}
+.hero-eyebrow{font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1rem}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(1.85rem,7vw,3.8rem);font-weight:700;color:#fff;max-width:700px;margin:0 auto 1rem;line-height:1.15}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero-desc{color:rgba(255,255,255,.6);font-size:15px;max-width:440px;margin:0 auto 2rem;line-height:1.7;font-weight:300}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-gold{background:var(--gold);color:var(--maroon-deep);border:none;padding:13px 28px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+.btn-gold:hover{background:#d9a040;transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35);padding:13px 28px;border-radius:50px;font-size:14px;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.hero-stats{display:flex;gap:2.5rem;justify-content:center;margin-top:3rem;flex-wrap:wrap}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-label{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px;text-transform:uppercase;letter-spacing:1px}
+
+/* ── SEARCH ── */
+.search-wrap{max-width:1300px;margin:0 auto;padding:1.25rem 1.5rem 0}
+.search-box{display:flex;align-items:center;gap:10px;background:var(--white);border:1.5px solid var(--border);border-radius:50px;padding:9px 16px;transition:border .2s}
+.search-box:focus-within{border-color:var(--maroon)}
+.search-box input{flex:1;border:none;outline:none;font-size:14px;font-family:'Outfit',sans-serif;color:var(--text);background:transparent}
+.search-box input::placeholder{color:var(--muted)}
+.search-clear{background:none;border:none;color:var(--muted);cursor:pointer;font-size:15px;display:none;padding:2px;line-height:1}
+.search-clear.show{display:block}
+
+/* ── FILTER ── */
+.filter-bar{background:var(--ivory);border-bottom:1px solid var(--border);padding:0 1.5rem;position:sticky;top:60px;z-index:100}
+.filter-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.filter-inner::-webkit-scrollbar{display:none}
+.filter-chip{padding:6px 15px;border-radius:50px;font-size:12.5px;font-weight:500;border:1.5px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;white-space:nowrap;transition:all .2s;font-family:'Outfit',sans-serif;flex-shrink:0}
+.filter-chip:hover{border-color:var(--maroon-mid);color:var(--maroon)}
+.filter-chip.active{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.sort-select{margin-left:auto;padding:6px 12px;border:1.5px solid var(--border);border-radius:50px;font-size:12px;font-family:'Outfit',sans-serif;color:var(--muted);background:#fff;cursor:pointer;outline:none;flex-shrink:0}
+
+/* ── PRODUCTS ── */
+.shop-section{max-width:1300px;margin:0 auto;padding:2rem 1.5rem}
+.grid-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:8px}
+.grid-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600}
+.grid-count{font-size:13px;color:var(--muted);font-weight:300}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.25rem}
+.product-card{background:var(--white);border:1px solid var(--border);border-radius:18px;overflow:hidden;transition:all .25s;cursor:pointer}
+.product-card:hover{box-shadow:0 12px 40px rgba(123,28,53,.13);transform:translateY(-3px);border-color:var(--maroon-mid)}
+.product-img-wrap{position:relative;height:240px;background:var(--maroon-soft);overflow:hidden}
+.product-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.product-card:hover .product-img-wrap img{transform:scale(1.06)}
+.product-img-placeholder{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.placeholder-icon{font-size:48px;opacity:.4}
+.placeholder-text{font-size:12px;color:var(--muted);opacity:.6}
+.p-badge{position:absolute;top:10px;left:10px;padding:3px 10px;border-radius:50px;font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
+.badge-new{background:var(--maroon);color:#fff}
+.badge-sale{background:var(--gold);color:var(--maroon-deep)}
+.badge-trending{background:var(--maroon-deep);color:var(--gold)}
+.p-wishlist{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.92);border:none;cursor:pointer;font-size:15px;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--muted)}
+.p-wishlist.liked{color:var(--maroon)}
+.product-body{padding:1rem 1.1rem 1.1rem}
+.p-category{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:600;margin-bottom:3px}
+.p-name{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:3px;line-height:1.3}
+.p-desc{font-size:12px;color:var(--muted);margin-bottom:6px;font-weight:300;line-height:1.5}
+.p-stars{display:flex;align-items:center;gap:4px;margin-bottom:6px}
+.stars-display{color:var(--gold);font-size:12px;letter-spacing:1px}
+.review-count{font-size:11px;color:var(--muted);cursor:pointer}
+.review-count:hover{color:var(--maroon)}
+.p-price-row{display:flex;align-items:center;gap:6px;margin-bottom:10px;flex-wrap:wrap}
+.p-price{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:var(--maroon)}
+.p-mrp{font-size:12px;color:var(--muted);text-decoration:line-through}
+.p-discount{font-size:11px;color:#2a8048;font-weight:600;background:#eaf6ee;padding:2px 7px;border-radius:50px}
+.p-add-btn{width:100%;background:var(--maroon);color:#fff;border:none;padding:10px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s}
+.p-add-btn:hover{background:var(--maroon-deep)}
+.p-add-btn.in-cart{background:#2a8048}
+.p-wa-btn{width:100%;background:#25d366;color:#fff;border:none;padding:9px;border-radius:50px;font-size:13px;font-weight:500;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;margin-top:6px;display:flex;align-items:center;justify-content:center;gap:6px;text-decoration:none}
+.p-wa-btn:hover{background:#1ebe5d}
+.p-review-link{text-align:center;margin-top:5px;font-size:11px;color:var(--muted);cursor:pointer}
+.p-review-link:hover{color:var(--maroon)}
+
+/* ── GALLERY ── */
+.gallery-section{max-width:1300px;margin:0 auto;padding:2.5rem 1.5rem}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px}
+.gallery-item{position:relative;aspect-ratio:1;overflow:hidden;border-radius:12px;cursor:pointer;background:var(--maroon-soft)}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.gallery-item:hover img{transform:scale(1.08)}
+.gallery-overlay{position:absolute;inset:0;background:rgba(78,15,31,.55);opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;border-radius:12px;padding:8px}
+.gallery-item:hover .gallery-overlay{opacity:1}
+.gallery-overlay-name{color:#fff;font-family:'Cormorant Garamond',serif;font-size:.95rem;font-weight:600;text-align:center}
+.gallery-overlay-price{color:var(--gold);font-size:13px;font-weight:600}
+.gallery-empty{grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted)}
+.gallery-add-zone{border:2.5px dashed var(--border);border-radius:12px;aspect-ratio:1;display:flex;align-items:center;justify-content:center;cursor:pointer;background:var(--cream);transition:all .25s;font-size:24px;color:var(--muted);position:relative}
+.gallery-add-zone:hover{border-color:var(--maroon-mid);background:var(--maroon-soft);color:var(--maroon)}
+.gallery-add-zone input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+
+/* ── LIGHTBOX ── */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:600;align-items:center;justify-content:center;flex-direction:column;padding:1rem}
+.lightbox.open{display:flex}
+.lightbox-img{max-width:90vw;max-height:72vh;object-fit:contain;border-radius:12px}
+.lightbox-close{position:absolute;top:16px;right:20px;background:none;border:none;color:#fff;font-size:28px;cursor:pointer;z-index:10}
+.lightbox-info{color:#fff;text-align:center;margin-top:14px}
+.lightbox-name{font-family:'Cormorant Garamond',serif;font-size:1.3rem;font-weight:700}
+.lightbox-price{color:var(--gold);font-size:14px;margin-top:4px}
+.lightbox-btns{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;justify-content:center}
+.lb-btn{padding:10px 22px;border-radius:50px;font-size:14px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;border:none;transition:all .2s}
+.lb-btn-cart{background:var(--maroon);color:#fff}.lb-btn-cart:hover{background:var(--maroon-deep)}
+.lb-btn-wa{background:#25d366;color:#fff}.lb-btn-wa:hover{background:#1ebe5d}
+
+/* ── REVIEWS ── */
+.review-item{border-bottom:1px solid var(--border);padding:12px 0}
+.review-item:last-child{border:none}
+.ri-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:4px}
+.ri-name{font-weight:600;font-size:14px}
+.ri-date{font-size:11px;color:var(--muted)}
+.ri-stars{color:var(--gold);font-size:13px}
+.ri-text{font-size:13px;color:var(--muted);line-height:1.6;margin-top:3px}
+.ri-verified{font-size:10px;color:var(--green);font-weight:600;margin-top:3px}
+.star-picker{display:flex;gap:6px;margin-bottom:10px}
+.star-picker span{font-size:28px;cursor:pointer;transition:transform .15s;color:#ddd;user-select:none}
+.star-picker span.on{color:var(--gold)}
+.star-picker span:hover{transform:scale(1.2)}
+
+/* ── SIZE GUIDE ── */
+.size-tab-row{display:flex;gap:6px;margin-bottom:1.25rem;flex-wrap:wrap}
+.size-tab{padding:6px 16px;border-radius:50px;font-size:12.5px;font-weight:500;border:1.5px solid var(--border);background:#fff;color:var(--muted);cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif}
+.size-tab.active{background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.size-table{width:100%;border-collapse:collapse;font-size:13px}
+.size-table th{background:var(--maroon-soft);color:var(--maroon);font-weight:600;padding:9px 12px;text-align:center;border:1px solid var(--border)}
+.size-table td{padding:9px 12px;text-align:center;border:1px solid var(--border);color:var(--text)}
+.size-table tr:nth-child(even) td{background:var(--ivory)}
+.size-tip{background:var(--gold-light);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:12.5px;color:var(--muted);margin-top:1rem;line-height:1.6}
+
+/* ── CART ── */
+.cart-page{max-width:860px;margin:0 auto;padding:2rem 1.5rem}
+.page-heading{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;margin-bottom:.2rem}
+.cart-item{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;margin-bottom:.85rem}
+.ci-img{width:64px;height:64px;border-radius:10px;background:var(--maroon-soft);flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:24px;overflow:hidden}
+.ci-img img{width:100%;height:100%;object-fit:cover}
+.ci-name{font-family:'Cormorant Garamond',serif;font-size:1rem;font-weight:600}
+.ci-sub{font-size:11px;color:var(--muted);margin-top:1px}
+.ci-price{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--maroon);white-space:nowrap}
+.qty-ctrl{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty-btn{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--border);background:none;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;color:var(--text)}
+.qty-btn:hover{border-color:var(--maroon);background:var(--maroon);color:#fff}
+.qty-num{font-size:14px;font-weight:500;min-width:20px;text-align:center}
+.rm-btn{background:none;border:none;color:var(--muted);cursor:pointer;font-size:16px;padding:5px;border-radius:8px;transition:all .2s;margin-left:auto}
+.rm-btn:hover{color:var(--maroon);background:var(--maroon-soft)}
+.cart-summary-box{background:var(--ivory);border:1px solid var(--border);border-radius:16px;padding:1.5rem;margin-top:1.25rem}
+.cs-row{display:flex;justify-content:space-between;padding:8px 0;font-size:14px;border-bottom:1px solid var(--border);color:var(--muted)}
+.cs-total{border:none!important;font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--maroon);padding-top:12px!important}
+.checkout-btn{width:100%;background:var(--maroon);color:#fff;border:none;padding:15px;border-radius:50px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;margin-top:1rem;transition:all .2s}
+.checkout-btn:hover{background:var(--maroon-deep)}
+.empty-cart{text-align:center;padding:4rem 1.5rem;color:var(--muted)}
+
+/* ── CHECKOUT ── */
+.checkout-page{max-width:600px;margin:0 auto;padding:2rem 1.5rem}
+.checkout-card{background:var(--white);border:1px solid var(--border);border-radius:20px;padding:1.75rem;margin-bottom:1.25rem}
+.cc-title{font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-weight:700;margin-bottom:1.25rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+.fg{margin-bottom:1rem}
+.fg label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:500;margin-bottom:5px}
+.fg input,.fg select,.fg textarea{width:100%;padding:11px 14px;border:1.5px solid var(--border);border-radius:11px;font-size:14px;font-family:'Outfit',sans-serif;color:var(--text);background:var(--ivory);outline:none;transition:border .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--maroon);background:#fff}
+.fg textarea{resize:vertical;min-height:60px}
+.required-badge{background:var(--maroon-soft);color:var(--maroon);font-size:10px;font-weight:600;padding:2px 8px;border-radius:50px;margin-left:8px}
+.pay-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:1rem}
+.pm{border:2px solid var(--border);border-radius:12px;padding:12px 10px;text-align:center;cursor:pointer;transition:all .2s;font-size:13px;font-weight:500;color:var(--muted)}
+.pm:hover{border-color:var(--maroon-mid)}
+.pm.sel{border-color:var(--maroon);background:var(--maroon-soft);color:var(--maroon)}
+.pm-icon{display:block;font-size:20px;margin-bottom:4px}
+.secure-note{display:flex;align-items:center;gap:7px;background:#f0faf4;border:1px solid #bce0ca;border-radius:10px;padding:9px 13px;font-size:12.5px;color:#1e6640;margin-bottom:1rem}
+.upi-apps{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.upi-app{background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:7px 14px;font-size:12px;cursor:pointer;transition:all .2s;font-family:'Outfit',sans-serif}
+.upi-app:hover{border-color:var(--maroon);color:var(--maroon)}
+.payment-extra{display:none}
+.payment-extra.show{display:block}
+.pay-btn{width:100%;background:#072654;color:#fff;border:none;padding:16px;border-radius:50px;font-size:15px;font-weight:600;cursor:pointer;font-family:'Outfit',sans-serif;transition:all .2s;display:flex;align-items:center;justify-content:center;gap:10px}
+.pay-btn:hover{background:#0a3a7a;transform:translateY(-1px)}
+.pay-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+.rzp-badge{background:#fff;color:#072654;font-size:10px;font-weight:800;padding:3px 8px;border-radius:4px;letter-spacing:.3px}
+.checkout-summary{background:var(--ivory);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem}
+.cs-item-row{display:flex;justify-content:space-between;font-size:13px;padding:5px 0;color:var(--muted);border-bottom:1px dashed var(--border)}
+.cs-item-row:last-child{border:none}
+.cs-item-total{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:var(--maroon);padding-top:10px;border-top:1.5px solid var(--border);border-bottom:none;margin-top:4px}
+
+/* ── SUCCESS ── */
+.success-page{max-width:520px;margin:0 auto;padding:3.5rem 1.5rem;text-align:center}
+.success-ring{width:90px;height:90px;border-radius:50%;background:var(--maroon-soft);border:3px solid var(--maroon-mid);display:flex;align-items:center;justify-content:center;font-size:42px;margin:0 auto 1.75rem;animation:popIn .45s ease}
+.order-pill{background:var(--maroon-soft);border:1.5px solid var(--maroon-mid);border-radius:50px;padding:9px 22px;display:inline-block;font-family:monospace;color:var(--maroon);font-size:13px;margin-bottom:.75rem;letter-spacing:1px}
+.payment-pill{background:var(--green-soft);border:1.5px solid var(--green-border);border-radius:50px;padding:8px 22px;display:inline-block;color:var(--green);font-size:12px;margin-bottom:1.5rem;font-weight:500}
+.track-info{background:var(--ivory);border:1px solid var(--border);border-radius:14px;padding:1.1rem;text-align:left;margin-bottom:1.75rem}
+.ti-row{display:flex;align-items:center;gap:9px;padding:5px 0;font-size:13px;color:var(--muted)}
+
+/* ── ABOUT ── */
+.about-page{max-width:680px;margin:0 auto;padding:3rem 1.5rem;text-align:center}
+.about-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 2rem; }
+.about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; background: linear-gradient(135deg, var(--maroon-deep), var(--maroon)); border-radius: 18px; padding: 1.75rem; margin-bottom: 2rem; }
+
+/* ── ADMIN DASHBOARD ── */
+.admin-page{max-width:1300px;margin:0 auto;padding:2rem 1.5rem}
+.admin-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem}
+.admin-title{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700}
+.dash-tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:2px solid var(--border);margin-bottom:2rem;padding-bottom:0}
+.dash-tab{padding:10px 18px;font-size:13.5px;font-weight:500;font-family:'Outfit',sans-serif;border:none;background:none;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .2s;border-radius:8px 8px 0 0;display:flex;align-items:center;gap:6px}
+.dash-tab:hover{color:var(--maroon);background:var(--maroon-soft)}
+.dash-tab.active{color:var(--maroon);border-bottom-color:var(--maroon);font-weight:600;background:var(--maroon-soft)}
+.tab-badge{background:var(--maroon);color:#fff;border-radius:50px;padding:1px 7px;font-size:10px;font-weight:700}
+.tab-panel{display:none}
+.tab-panel.active{display:block;animation:fadeUp .25s ease}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:1rem;margin-bottom:1.5rem}
+.stat-card{background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.25rem}
+.sc-label{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;font-weight:500;margin-bottom:6px}
+.sc-value{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--maroon);line-height:1}
+.sc-sub{font-size:11px;color:var(--muted);margin-top:4px}
+.sc-value.green{color:var(--green)}
+.sc-value.gold{color:var(--gold)}
+.orders-toolbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:1rem}
+.orders-search-box{display:flex;align-items:center;gap:8px;background:var(--white);border:1.5px solid var(--border);border-radius:50px;padding:7px 14px;transition:border .2s}
+.orders-search-box input{border:none;outline:none;font-size:13px;font-family:'Outfit',sans-serif;color:var(--text);background:transparent;width:180px}
+.filter-select{padding:7px 14px;border:1.5px solid var(--border);border-radius:50px;font-size:13px;font-family:'Outfit',sans-serif;color:var(--muted);background:#fff;cursor:pointer;outline:none}
+.orders-wrap{background:var(--white);border:1px solid var(--border);border-radius:18px;overflow:hidden;overflow-x:auto}
+.orders-table{width:100%;border-collapse:collapse;min-width:700px}
+.orders-table th{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:500;padding:12px 14px;text-align:left;background:var(--ivory);border-bottom:1.5px solid var(--border);white-space:nowrap}
+.orders-table td{padding:11px 14px;border-bottom:1px solid var(--border);font-size:13px;vertical-align:middle}
+.orders-table tr:last-child td{border:none}
+.orders-table tr:hover td{background:var(--cream)}
+.status-badge{padding:3px 11px;border-radius:50px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap}
+.s-new{background:#fff3cd;color:#856404}
+.s-confirmed{background:#cfe2ff;color:#084298}
+.s-shipped{background:#d1ecf1;color:#0c5460}
+.s-delivered{background:var(--green-soft);color:var(--green)}
+.s-cancelled{background:#f8d7da;color:#842029}
+.tbl-btn{background:none;border:1px solid var(--border);color:var(--muted);padding:4px 10px;border-radius:7px;cursor:pointer;font-size:11px;font-family:'Outfit',sans-serif;transition:all .2s;white-space:nowrap}
+.tbl-btn:hover{border-color:var(--maroon);color:var(--maroon);background:var(--maroon-soft)}
+.tbl-btn.red:hover{border-color:#e24b4a;color:#e24b4a;background:#fcebeb}
+.no-orders{text-align:center;padding:3rem;color:var(--muted);font-size:14px}
+.om-section{margin-bottom:1.25rem;padding-bottom:1.25rem;border-bottom:1px solid var(--border)}
+.om-section:last-child{border:none;margin:0;padding:0}
+.om-title{font-size:11px;text-transform:uppercase;letter-spacing:.8px;color:var(--muted);font-weight:600;margin-bottom:10px}
+.om-row{display:flex;justify-content:space-between;align-items:flex-start;font-size:13.5px;padding:4px 0;gap:12px}
+.om-row span:first-child{color:var(--muted);flex-shrink:0}
+.om-row span:last-child{font-weight:500;text-align:right}
+.om-product-chip{background:var(--maroon-soft);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:12px;margin-bottom:5px;display:flex;justify-content:space-between;gap:8px}
+.status-sel{padding:9px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;outline:none;background:var(--ivory)}
+.update-btn{background:var(--maroon);color:#fff;border:none;padding:9px 20px;border-radius:50px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;font-weight:500}
+.update-btn:hover{background:var(--maroon-deep)}
+.prod-tab-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:1.5rem;align-items:start}
+.admin-card{background:var(--white);border:1px solid var(--border);border-radius:18px;padding:1.5rem}
+.ac-title{font-family:'Cormorant Garamond',serif;font-size:1.15rem;font-weight:700;margin-bottom:1.25rem;padding-bottom:.65rem;border-bottom:1px solid var(--border)}
+.upload-zone{border:2.5px dashed var(--border);border-radius:14px;padding:2rem 1.25rem;text-align:center;cursor:pointer;transition:all .25s;background:var(--cream);position:relative;overflow:hidden;margin-bottom:1.1rem}
+.upload-zone:hover,.upload-zone.drag{border-color:var(--maroon-mid);background:var(--maroon-soft)}
+.upload-zone input[type="file"]{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+.uz-icon{font-size:32px;margin-bottom:8px;display:block;opacity:.45}
+.uz-text{font-size:13px;color:var(--muted)}.uz-text strong{color:var(--maroon);font-weight:600}
+.uz-sub{font-size:11px;color:var(--muted);margin-top:3px;opacity:.65}
+#preview-img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:1.1rem;display:none;border:1px solid var(--border)}
+.prod-table{width:100%;border-collapse:collapse}
+.prod-table th{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:500;padding:7px 10px;text-align:left;border-bottom:1.5px solid var(--border)}
+.prod-table td{padding:9px 10px;border-bottom:1px solid var(--border);font-size:13px;vertical-align:middle}
+.prod-table tr:last-child td{border:none}
+.del-btn{background:none;border:1px solid var(--border);color:var(--muted);width:28px;height:28px;border-radius:7px;cursor:pointer;font-size:13px;transition:all .2s;display:flex;align-items:center;justify-content:center}
+.del-btn:hover{border-color:#e24b4a;color:#e24b4a;background:#fcebeb}
+.settings-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.settings-card{background:var(--white);border:1px solid var(--border);border-radius:18px;padding:1.5rem}
+.stg-title{font-size:15px;font-weight:600;margin-bottom:.5rem;display:flex;align-items:center;gap:8px}
+.stg-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:1rem}
+.stg-label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:5px;margin-top:10px}
+.stg-input{width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;background:var(--ivory);outline:none;transition:border .2s;color:var(--text)}
+.stg-input:focus{border-color:var(--maroon);background:#fff}
+.stg-btn{margin-top:10px;background:var(--maroon);color:#fff;border:none;padding:9px 22px;border-radius:50px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;font-weight:500}
+.stg-btn:hover{background:var(--maroon-deep)}
+.stg-status{font-size:12px;margin-top:7px;font-weight:500;padding:6px 12px;border-radius:8px;display:inline-block}
+.stg-status.ok{background:var(--green-soft);color:var(--green)}
+.stg-status.warn{background:#fff3cd;color:#856404}
+.step-item{display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.5}
+.step-item:last-child{border:none}
+.step-num{width:22px;height:22px;border-radius:50%;background:var(--maroon-soft);color:var(--maroon);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+
+/* ── MISC ── */
+.wa-btn{position:fixed;bottom:24px;right:20px;width:52px;height:52px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 4px 16px rgba(37,211,102,.45);z-index:400;transition:transform .2s;text-decoration:none}
+.wa-btn:hover{transform:scale(1.1)}
+.toast{position:fixed;bottom:88px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--maroon-deep);color:#fff;padding:10px 20px;border-radius:50px;font-size:13.5px;z-index:9999;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap;box-shadow:0 4px 20px rgba(78,15,31,.35)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+footer{background:var(--maroon-deep);color:rgba(255,255,255,.5);padding:2.5rem 1.5rem 1.75rem;text-align:center;margin-top:4rem}
+footer .fn{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--gold);font-weight:700;margin-bottom:5px}
+footer p{font-size:13px;margin-top:4px;line-height:1.7}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){.settings-grid{grid-template-columns:1fr}.prod-tab-grid{grid-template-columns:1fr}}
+@media(max-width:768px){
+  .nav-links{display:none}.hamburger{display:flex}.mobile-menu{display:block}.admin-trigger{display:none}
+  .products-grid{grid-template-columns:repeat(2,1fr);gap:.85rem}.product-img-wrap{height:195px}
+  .form-row{grid-template-columns:1fr}.hero{padding:3rem 1.25rem 2.75rem}.hero-stats{gap:1.5rem}
+  .cart-item{gap:.75rem}.ci-img{width:56px;height:56px}.pay-methods{grid-template-columns:repeat(3,1fr)}
+  .about-features { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: 1fr; gap: 1.5rem; }
+  .about-stats > div { border-left: none !important; border-right: none !important; border-bottom: 1px solid rgba(255,255,255,.15); padding-bottom: 1rem; }
+  .about-stats > div:last-child { border-bottom: none; padding-bottom: 0; }
+}
+@media(max-width:480px){
+  .brand-sub{display:none}.brand-name{font-size:17px}
+  .products-grid{grid-template-columns:repeat(2,1fr);gap:.65rem}.product-img-wrap{height:170px}
+  .hero h1{font-size:1.75rem}.checkout-card{padding:1.25rem}
+  .pay-methods{grid-template-columns:repeat(3,1fr)}
+  .wa-btn{width:48px;height:48px;font-size:22px;bottom:18px;right:16px}
+}
+@media(min-width:769px){.hamburger,.mobile-menu{display:none!important}.admin-trigger{display:block}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="brand" onclick="goPage('home')">
+      <span class="brand-name">Patiala Fashion</span>
+      <span class="brand-sub">Tohana Road · Ratia, Haryana</span>
+    </div>
+    <div class="nav-links">
+      <button class="nav-link active" id="nl-home" onclick="goPage('home')">Home</button>
+      <button class="nav-link" id="nl-shop" onclick="goPage('shop')">Shop</button>
+      <button class="nav-link" id="nl-about" onclick="goPage('about')">About</button>
+    </div>
+    <div class="nav-right">
+      <button class="admin-trigger" onclick="openAdminLogin()" title="Owner login">🔒</button>
+      <button class="cart-btn" onclick="goPage('cart')">🛍<span class="cart-dot" id="cart-dot">0</span></button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <button class="nav-link" onclick="goPage('home');closeMenu()">🏠 Home</button>
+  <button class="nav-link" onclick="goPage('shop');closeMenu()">👗 Shop</button>
+  <button class="nav-link" onclick="goPage('about');closeMenu()">📖 About</button>
+  <button class="nav-link" onclick="openAdminLogin();closeMenu()">🔒 Owner Login</button>
+</div>
+
+<div class="admin-bar" id="admin-bar">
+  <span style="font-size:13px;color:var(--maroon);font-weight:500">⚙ Admin Mode — Welcome, Amarjeet!</span>
+  <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+    <button class="btn-gold" style="padding:7px 18px;font-size:13px" onclick="goPage('admin')">Dashboard</button>
+    <button class="ab-logout" onclick="logoutAdmin()">Logout</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="login-modal" onclick="if(event.target.id==='login-modal')closeAdminLogin()">
+  <div class="modal-box">
+    <button class="lm-close" onclick="closeAdminLogin()">✕</button>
+    <div class="lm-icon">🔐</div>
+    <div class="lm-title">Owner Login</div>
+    <div class="lm-sub">Only for the shop owner</div>
+    <div class="lm-error" id="login-error">Wrong password. Please try again.</div>
+    <div class="lm-fg"><label>Password</label><input type="password" id="admin-pass" placeholder="Enter your password" onkeydown="if(event.key==='Enter')doLogin()"></div>
+    <button class="lm-btn" onclick="doLogin()">Login &rarr;</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="review-modal" onclick="if(event.target.id==='review-modal')closeModal('review-modal')">
+  <div class="modal-box wide">
+    <button class="lm-close" onclick="closeModal('review-modal')">✕</button>
+    <div id="review-modal-content"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="size-modal" onclick="if(event.target.id==='size-modal')closeModal('size-modal')">
+  <div class="modal-box wider">
+    <button class="lm-close" onclick="closeModal('size-modal')">✕</button>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;margin-bottom:.4rem">📐 Size Guide</div>
+    <p style="font-size:13px;color:var(--muted);margin-bottom:1.25rem;font-weight:300">All measurements in centimetres. Measure over inner garments for best fit.</p>
+    <div class="size-tab-row">
+      <button class="size-tab active" onclick="switchSizeTab('suit',this)">Punjabi Suit</button>
+      <button class="size-tab" onclick="switchSizeTab('dupatta',this)">Dupatta</button>
+      <button class="size-tab" onclick="switchSizeTab('measure',this)">How to Measure</button>
+    </div>
+    
+    <div class="table-responsive" id="size-tab-suit">
+      <table class="size-table">
+        <thead><tr><th>Size</th><th>Chest (cm)</th><th>Waist (cm)</th><th>Hip (cm)</th><th>Length</th></tr></thead>
+        <tbody>
+          <tr><td><strong>XS</strong></td><td>76-80</td><td>60-64</td><td>82-86</td><td>38-40"</td></tr>
+          <tr><td><strong>S</strong></td><td>80-84</td><td>64-68</td><td>86-90</td><td>40-42"</td></tr>
+          <tr><td><strong>M</strong></td><td>84-88</td><td>68-72</td><td>90-94</td><td>42-44"</td></tr>
+          <tr><td><strong>L</strong></td><td>88-92</td><td>72-76</td><td>94-98</td><td>44-46"</td></tr>
+          <tr><td><strong>XL</strong></td><td>92-96</td><td>76-80</td><td>98-102</td><td>46-48"</td></tr>
+          <tr><td><strong>XXL</strong></td><td>96-102</td><td>80-86</td><td>102-108</td><td>48-50"</td></tr>
+          <tr><td><strong>XXXL</strong></td><td>102-108</td><td>86-92</td><td>108-114</td><td>50-52"</td></tr>
+        </tbody>
+      </table>
+      <div class="size-tip">💡 If between two sizes, choose the larger for a comfortable fit.</div>
+    </div>
+    
+    <div class="table-responsive" id="size-tab-dupatta" style="display:none">
+      <table class="size-table">
+        <thead><tr><th>Type</th><th>Width</th><th>Length</th><th>Best For</th></tr></thead>
+        <tbody>
+          <tr><td>Regular</td><td>45-50 cm</td><td>2.25 m</td><td>Daily wear</td></tr>
+          <tr><td>Wide</td><td>60-65 cm</td><td>2.5 m</td><td>Festivals, weddings</td></tr>
+          <tr><td>Phulkari</td><td>55-60 cm</td><td>2.5 m</td><td>Traditional look</td></tr>
+          <tr><td>Heavy Bridal</td><td>80-90 cm</td><td>3 m</td><td>Bridal</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div id="size-tab-measure" style="display:none">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:var(--ivory);border-radius:10px;padding:12px;border:1px solid var(--border)"><div style="font-weight:600;font-size:14px;margin-bottom:3px">📏 Chest / Bust</div><div style="font-size:13px;color:var(--muted)">Measure around the fullest part of your chest, parallel to the floor.</div></div>
+        <div style="background:var(--ivory);border-radius:10px;padding:12px;border:1px solid var(--border)"><div style="font-weight:600;font-size:14px;margin-bottom:3px">📏 Waist</div><div style="font-size:13px;color:var(--muted)">Measure around the narrowest part of your waist, 2-3 cm above your navel.</div></div>
+        <div style="background:var(--ivory);border-radius:10px;padding:12px;border:1px solid var(--border)"><div style="font-weight:600;font-size:14px;margin-bottom:3px">📏 Hip</div><div style="font-size:13px;color:var(--muted)">Measure around the fullest part of your hips, approx 20 cm below your waist.</div></div>
+        <div style="background:var(--ivory);border-radius:10px;padding:12px;border:1px solid var(--border)"><div style="font-weight:600;font-size:14px;margin-bottom:3px">📏 Kameez Length</div><div style="font-size:13px;color:var(--muted)">Measure from shoulder top to where you want the kameez to end.</div></div>
+      </div>
+      <div class="size-tip">📞 Not sure? Call us at <strong>+91-7015910228</strong> — we'll help you pick the perfect fit!</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="order-modal" onclick="if(event.target.id==='order-modal')closeOrderModal()">
+  <div class="modal-box wide">
+    <button class="lm-close" onclick="closeOrderModal()">✕</button>
+    <div id="order-modal-content"></div>
+  </div>
+</div>
+
+<div class="lightbox" id="lightbox" onclick="if(event.target.id==='lightbox')closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img class="lightbox-img" id="lb-img" src="" alt="">
+  <div class="lightbox-info">
+    <div class="lightbox-name" id="lb-name"></div>
+    <div class="lightbox-price" id="lb-price"></div>
+  </div>
+  <div class="lightbox-btns">
+    <button class="lb-btn lb-btn-cart" id="lb-cart-btn">🛒 Add to Cart</button>
+    <button class="lb-btn lb-btn-wa" id="lb-wa-btn">💬 WhatsApp</button>
+  </div>
+</div>
+
+<div class="page active" id="pg-home">
+  <div class="hero">
+    <div class="hero-pattern"></div>
+    <div style="position:relative;z-index:1">
+      <p class="hero-eyebrow">✦ Patiala Fashion — Ratia, Haryana ✦</p>
+      <h1>Handcrafted <em>Punjabi Suits</em><br>for Every Occasion</h1>
+      <p class="hero-desc">Authentic Punjabi suits — Phulkari, Anarkali, Patiala Salwar and more. Crafted with love.</p>
+      <div class="hero-actions">
+        <button class="btn-gold" onclick="goPage('shop')">Explore Collection</button>
+        <button class="btn-ghost" onclick="goPage('about')">Our Story</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num" id="stat-count">0</div><div class="stat-label">Suits Available</div></div>
+        <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Authentic</div></div>
+        <div class="stat"><div class="stat-num">5★</div><div class="stat-label">Rated</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="info-strip">
+    <div class="strip-track">
+      <div class="strip-item"><span>🚚</span><span>Free delivery above <strong>Rs.1,550</strong></span></div>
+      <div class="strip-item"><span>🧵</span><span><strong>Premium quality</strong> fabrics &amp; clothes</span></div>
+      <div class="strip-item"><span>🔒</span><span><strong>Secure</strong> Razorpay payments</span></div>
+      <div class="strip-item"><span>📞</span><a href="tel:+917015910228" style="display:flex;align-items:center;gap:6px;color:var(--maroon);font-weight:600;white-space:nowrap">Call: +91-7015910228</a></div>
+      <div class="strip-item"><span>🎁</span><span><strong>Gift wrapping</strong> on request</span></div>
+    </div>
+  </div>
+  <div style="max-width:1300px;margin:0 auto;padding:2.5rem 1.5rem">
+    <div style="text-align:center;margin-bottom:2rem">
+      <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px">Latest Arrivals</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700">Featured Collection</h2>
+    </div>
+    <div class="products-grid" id="featured-grid"></div>
+    <div style="text-align:center;margin-top:2rem"><button class="btn-gold" onclick="goPage('shop')">View All Suits &rarr;</button></div>
+  </div>
+  <div class="gallery-section">
+    <div style="text-align:center;margin-bottom:1.75rem">
+      <p style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px">📸 Visual Showcase</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:700">Our Collection Gallery</h2>
+      <p style="color:var(--muted);font-size:14px;margin-top:6px;font-weight:300">Click any photo to explore &amp; shop</p>
+    </div>
+    <div class="gallery-grid" id="home-gallery-grid"></div>
+  </div>
+</div>
+
+<div class="page" id="pg-shop">
+  <div class="search-wrap">
+    <div class="search-box">
+      <span style="color:var(--muted);font-size:16px">🔍</span>
+      <input type="text" id="search-input" placeholder="Search suits..." oninput="handleSearch(this.value)">
+      <button class="search-clear" id="search-clear" onclick="clearSearch()">✕</button>
+    </div>
+  </div>
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <button class="filter-chip active" onclick="setFilter('All',this)">All</button>
+      <button class="filter-chip" onclick="setFilter('Phulkari',this)">Phulkari</button>
+      <button class="filter-chip" onclick="setFilter('Anarkali',this)">Anarkali</button>
+      <button class="filter-chip" onclick="setFilter('Patiala Salwar',this)">Patiala Salwar</button>
+      <button class="filter-chip" onclick="setFilter('Cotton',this)">Cotton</button>
+      <button class="filter-chip" onclick="setFilter('Silk',this)">Silk</button>
+      <button class="filter-chip" onclick="setFilter('Bridal',this)">Bridal</button>
+      <select class="sort-select" onchange="sortProducts(this.value)">
+        <option value="newest">Newest</option>
+        <option value="low">Price ↑</option>
+        <option value="high">Price ↓</option>
+      </select>
+      <button class="filter-chip" onclick="openSizeGuide()" style="background:var(--maroon-soft);color:var(--maroon);border-color:var(--maroon-mid);flex-shrink:0">📐 Size Guide</button>
+    </div>
+  </div>
+  <div class="shop-section">
+    <div class="grid-header">
+      <div class="grid-title">All Punjabi Suits</div>
+      <div class="grid-count" id="grid-count"></div>
+    </div>
+    <div class="products-grid" id="shop-grid"></div>
+    <div id="empty-shop" style="display:none;text-align:center;padding:3.5rem 1rem;color:var(--muted)">
+      <div style="font-size:52px;margin-bottom:1rem">🧵</div>
+      <p style="font-size:15px;font-weight:500">No suits found</p>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="pg-cart">
+  <div class="cart-page">
+    <h1 class="page-heading">Your Cart</h1>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:1.75rem;font-weight:300" id="cart-sub"></p>
+    <div id="cart-body"></div>
+  </div>
+</div>
+
+<div class="page" id="pg-checkout">
+  <div class="checkout-page">
+    <h1 class="page-heading" style="margin-bottom:.25rem">Checkout</h1>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:1.75rem;font-weight:300">Fill in your details to complete your order</p>
+    <div class="checkout-card">
+      <div class="cc-title">👤 Customer Info <span class="required-badge">Required</span></div>
+      <div class="form-row">
+        <div class="fg"><label>Full Name ★</label><input type="text" id="co-name" placeholder="Your full name"></div>
+        <div class="fg"><label>Phone Number ★</label><input type="tel" id="co-phone" placeholder="+91 00000 00000" maxlength="13"></div>
+      </div>
+      <div class="fg"><label>Email (for receipt)</label><input type="email" id="co-email" placeholder="yourname@gmail.com"></div>
+    </div>
+    <div class="checkout-card">
+      <div class="cc-title">📍 Delivery Address</div>
+      <div class="fg"><label>Full Address</label><textarea id="co-addr" placeholder="House no., Street, Village / Town"></textarea></div>
+      <div class="form-row">
+        <div class="fg"><label>City / Town</label><input type="text" id="co-city" placeholder="Ratia / Fatehabad..."></div>
+        <div class="fg"><label>PIN Code</label><input type="text" id="co-pin" placeholder="125051" maxlength="6" oninput="this.value=this.value.replace(/\D/g,'')"></div>
+      </div>
+    </div>
+    <div class="checkout-card">
+      <div class="cc-title">🛍 Order Summary</div>
+      <div id="checkout-order-summary"></div>
+    </div>
+    <div class="checkout-card">
+      <div class="cc-title">💳 Payment Method</div>
+      <div class="secure-note">🔒 All payments are 100% secure via Razorpay</div>
+      <div class="pay-methods">
+        <div class="pm sel" id="pm-upi" onclick="selPay('upi')"><span class="pm-icon">📲</span>UPI</div>
+        <div class="pm" id="pm-card" onclick="selPay('card')"><span class="pm-icon">💳</span>Card</div>
+        <div class="pm" id="pm-nb" onclick="selPay('nb')"><span class="pm-icon">🏦</span>Net Banking</div>
+      </div>
+      <div class="payment-extra show" id="extra-upi">
+        <div class="fg"><label>UPI ID</label><input type="text" id="upi-id" placeholder="yourname@paytm or @upi"></div>
+        <div class="upi-apps">
+          <button class="upi-app" onclick="setUpi('@ybl')">📱 PhonePe</button>
+          <button class="upi-app" onclick="setUpi('@okaxis')">💚 GPay</button>
+          <button class="upi-app" onclick="setUpi('@paytm')">🔵 Paytm</button>
+          <button class="upi-app" onclick="setUpi('@upi')">🟠 BHIM</button>
+        </div>
+      </div>
+      <div class="payment-extra" id="extra-card">
+        <div class="fg"><label>Name on Card</label><input type="text" placeholder="As printed on card"></div>
+        <div class="fg"><label>Card Number</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" oninput="fmtCard(this)"></div>
+        <div class="form-row">
+          <div class="fg"><label>Expiry</label><input type="text" placeholder="MM / YY" maxlength="7" oninput="fmtExpiry(this)"></div>
+          <div class="fg"><label>CVV</label><input type="password" placeholder="..." maxlength="3"></div>
+        </div>
+      </div>
+      <div class="payment-extra" id="extra-nb">
+        <div class="fg"><label>Select Bank</label>
+          <select id="nb-bank"><option>State Bank of India</option><option>HDFC Bank</option><option>ICICI Bank</option><option>Punjab National Bank</option><option>Axis Bank</option><option>Kotak Mahindra Bank</option><option>Bank of Baroda</option><option>Canara Bank</option></select>
+        </div>
+      </div>
+    </div>
+    <button class="pay-btn" id="pay-btn" onclick="placeOrder()">
+      <span class="rzp-badge">R</span><span id="pay-btn-text">Pay Securely via Razorpay</span>
+    </button>
+    <div style="text-align:center;font-size:12px;color:var(--muted);margin-top:8px">Secured by Razorpay · PCI DSS compliant · SSL encrypted</div>
+  </div>
+</div>
+
+<div class="page" id="pg-success">
+  <div class="success-page">
+    <div class="success-ring">🎉</div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;margin-bottom:.65rem">Order Confirmed!</h2>
+    <p style="color:var(--muted);font-size:14px;line-height:1.7;margin-bottom:1.5rem;font-weight:300">Thank you for shopping with <strong>Patiala Fashion</strong>. Your Punjabi suit is being prepared!</p>
+    <div class="order-pill" id="success-order-id"></div><br>
+    <div class="payment-pill" id="success-pay-method"></div>
+    <div class="track-info">
+      <div class="ti-row"><span>✅</span><span>Order confirmed &amp; details sent to owner</span></div>
+      <div class="ti-row"><span>📦</span><span>Estimated delivery: 3-5 working days</span></div>
+      <div class="ti-row"><span>📞</span><span>We'll call <strong>+91-7015910228</strong> before dispatch</span></div>
+      <div class="ti-row"><span>📍</span><span>Tohana Road, Ratia, Haryana — 125051</span></div>
+    </div>
+    <button class="btn-gold" onclick="goPage('shop');resetCart()">Continue Shopping</button>
+  </div>
+</div>
+
+<div class="page" id="pg-about">
+  <div class="about-page">
+    <p style="font-size:10px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem">✦ Pure Indian Craftsmanship ✦</p>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:700;margin-bottom:1.5rem;line-height:1.2">Where Every Stitch<br><em style="color:var(--maroon)">Tells a Story</em></h1>
+    <p style="color:var(--muted);font-size:15px;line-height:1.9;margin-bottom:1.25rem;font-weight:300">We believe that a woman's outfit is not just fabric — it is her confidence, her identity, her celebration. At <strong style="color:var(--text)">Patiala Fashion</strong>, every Punjabi suit is handpicked to make you feel like the most beautiful version of yourself.</p>
+    <p style="color:var(--muted);font-size:15px;line-height:1.9;margin-bottom:2rem;font-weight:300">From the <strong style="color:var(--text)">hand-embroidered Phulkari</strong> passed down through generations to the graceful drape of a <strong style="color:var(--text)">silk Anarkali</strong> — we bring authentic Punjabi craftsmanship at honest prices.</p>
+    
+    <div class="about-features" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-bottom:2rem">
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.25rem;text-align:left"><div style="font-size:28px;margin-bottom:8px">🧵</div><div style="font-weight:600;font-size:14px;margin-bottom:4px">100% Authentic Fabric</div><div style="font-size:12px;color:var(--muted);line-height:1.6">Pure cotton, silk &amp; georgette — no compromise on quality.</div></div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.25rem;text-align:left"><div style="font-size:28px;margin-bottom:8px">💐</div><div style="font-weight:600;font-size:14px;margin-bottom:4px">Traditional Indian Designs</div><div style="font-size:12px;color:var(--muted);line-height:1.6">Phulkari, Chikankari, Zari, Mirror work — rooted in India's traditions.</div></div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.25rem;text-align:left"><div style="font-size:28px;margin-bottom:8px">🚚</div><div style="font-weight:600;font-size:14px;margin-bottom:4px">Delivered Pan India</div><div style="font-size:12px;color:var(--muted);line-height:1.6">From Kashmir to Kanyakumari — fast, safe &amp; packed with love.</div></div>
+      <div style="background:var(--white);border:1px solid var(--border);border-radius:16px;padding:1.25rem;text-align:left"><div style="font-size:28px;margin-bottom:8px">🤝</div><div style="font-weight:600;font-size:14px;margin-bottom:4px">Trusted by 1000+ Women</div><div style="font-size:12px;color:var(--muted);line-height:1.6">Mothers, daughters, brides and students across India trust us.</div></div>
+    </div>
+
+    <div class="about-stats" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;background:linear-gradient(135deg,var(--maroon-deep),var(--maroon));border-radius:18px;padding:1.75rem;margin-bottom:2rem">
+      <div style="text-align:center"><div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold)">1000+</div><div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:4px;text-transform:uppercase;letter-spacing:1px">Happy Customers</div></div>
+      <div style="text-align:center;border-left:1px solid rgba(255,255,255,.15);border-right:1px solid rgba(255,255,255,.15)"><div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold)">50+</div><div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:4px;text-transform:uppercase;letter-spacing:1px">Suit Styles</div></div>
+      <div style="text-align:center"><div style="font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:700;color:var(--gold)">5★</div><div style="font-size:11px;color:rgba(255,255,255,.6);margin-top:4px;text-transform:uppercase;letter-spacing:1px">Rated</div></div>
+    </div>
+
+    <div style="background:var(--maroon-soft);border-left:4px solid var(--maroon);border-radius:0 12px 12px 0;padding:1.25rem 1.5rem;margin-bottom:2rem;text-align:left">
+      <p style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;font-style:italic;color:var(--maroon-deep);line-height:1.6">"Because every Indian woman deserves to wear her culture with pride — beautifully, confidently, affordably."</p>
+      <p style="font-size:12px;color:var(--muted);margin-top:8px;font-weight:500">— Patiala Fashion</p>
+    </div>
+    
+    <div style="background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.25rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+      <div><div style="font-weight:600;font-size:15px;margin-bottom:4px">Talk to us directly</div><div style="font-size:13px;color:var(--muted);line-height:1.8">📞 <a href="tel:+917015910228" style="color:var(--maroon);font-weight:600">+91-7015910228</a><br>Mon-Sat: 10AM-8PM</div></div>
+      <a href="https://wa.me/917015910228?text=Hello%20Patiala%20Fashion!%20I%20want%20to%20know%20more%20about%20your%20Punjabi%20suits!" target="_blank" style="background:#25d366;color:#fff;padding:11px 22px;border-radius:50px;font-size:14px;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:8px">💬 WhatsApp Us</a>
+    </div>
+  </div>
+</div>
+
+<div class="page" id="pg-admin">
+  <div class="admin-page">
+    <div class="admin-top">
+      <h1 class="admin-title">📊 Admin Dashboard</h1>
+      <button class="btn-gold" onclick="goPage('shop')">← View Shop</button>
+    </div>
+    <div class="dash-tabs">
+      <button class="dash-tab active" onclick="switchTab('orders',this)">📦 Orders <span class="tab-badge" id="orders-badge">0</span></button>
+      <button class="dash-tab" onclick="switchTab('products',this)">👗 Products</button>
+      <button class="dash-tab" onclick="switchTab('gallery',this)">📸 Gallery</button>
+      <button class="dash-tab" onclick="switchTab('settings',this)">⚙ Settings</button>
+    </div>
+
+    <div class="tab-panel active" id="tab-orders">
+      <div class="stats-row" id="stats-row"></div>
+      <div class="orders-toolbar">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <div class="orders-search-box">
+            <span style="color:var(--muted);font-size:14px">🔍</span>
+            <input type="text" placeholder="Search orders..." oninput="filterOrders(this.value)">
+          </div>
+          <select class="filter-select" onchange="filterOrdersByStatus(this.value)">
+            <option value="all">All Status</option>
+            <option value="New">New</option>
+            <option value="Confirmed">Confirmed</option>
+            <option value="Shipped">Shipped</option>
+            <option value="Delivered">Delivered</option>
+            <option value="Cancelled">Cancelled</option>
+          </select>
+        </div>
+        <button class="btn-gold" style="padding:8px 18px;font-size:13px" onclick="exportOrders()">⬇ Export CSV</button>
+      </div>
+      <div class="orders-wrap">
+        <table class="orders-table">
+          <thead><tr><th>Order ID</th><th>Name</th><th>Phone</th><th>Products</th><th>Payment</th><th>Amount</th><th>Status</th><th>Date</th><th>Actions</th></tr></thead>
+          <tbody id="orders-tbody"></tbody>
+        </table>
+        <div class="no-orders" id="no-orders" style="display:none">
+          <div style="font-size:48px;margin-bottom:1rem">📦</div>
+          <p style="font-size:15px;font-weight:500">No orders yet</p>
+          <p style="font-size:13px;margin-top:4px;font-weight:300">Orders appear here when customers place them</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-products">
+      <div class="prod-tab-grid">
+        <div class="admin-card">
+          <div class="ac-title">➕ Add New Suit</div>
+          <div class="upload-zone" id="upload-zone">
+            <input type="file" accept="image/*" id="img-input" onchange="previewImage(this)">
+            <span class="uz-icon">🖼</span>
+            <div class="uz-text"><strong>Click to upload</strong> or drag &amp; drop</div>
+            <div class="uz-sub">JPG, PNG, WebP · Max 5MB</div>
+          </div>
+          <img id="preview-img" alt="Preview" style="display:none; width:100%; height:auto; margin-bottom:10px;">
+          <div class="fg"><label>Suit Name *</label><input type="text" id="a-name" placeholder="e.g. Phulkari Anarkali Set"></div>
+          <div class="fg"><label>Category</label>
+            <select id="a-cat"><option value="Phulkari">Phulkari</option><option value="Anarkali">Anarkali</option><option value="Patiala Salwar">Patiala Salwar</option><option value="Cotton">Cotton</option><option value="Silk">Silk</option><option value="Bridal">Bridal</option></select>
+          </div>
+          <div class="fg"><label>Description</label><input type="text" id="a-desc" placeholder="e.g. 3-piece set with embroidered dupatta"></div>
+          <div class="form-row">
+            <div class="fg"><label>Price (Rs.) *</label><input type="number" id="a-price" placeholder="1499" min="1"></div>
+            <div class="fg"><label>MRP (Rs.)</label><input type="number" id="a-mrp" placeholder="2199" min="1"></div>
+          </div>
+          <div class="fg"><label>Badge</label><select id="a-badge"><option value="">None</option><option value="new">New</option><option value="sale">Sale</option><option value="trending">Trending</option></select></div>
+          <div class="fg"><label>Available Sizes</label><input type="text" id="a-sizes" placeholder="S, M, L, XL, XXL"></div>
+          <button class="btn-gold" style="width:100%;padding:13px;font-size:14px;border-radius:50px" onclick="addProduct()">Add to Store ✓</button>
+        </div>
+        <div class="admin-card">
+          <div class="ac-title" style="display:flex;align-items:center;justify-content:space-between">
+            <span>Products in Store</span><span style="font-size:13px;color:var(--muted);font-weight:300" id="prod-count-label"></span>
+          </div>
+          <div style="overflow-x:auto">
+            <table class="prod-table">
+              <thead><tr><th>Photo</th><th>Name</th><th>Cat</th><th>Price</th><th></th></tr></thead>
+              <tbody id="admin-table"></tbody>
+            </table>
+          </div>
+          <div id="admin-empty" style="text-align:center;padding:2rem;color:var(--muted);font-size:13px"><div style="font-size:32px;margin-bottom:8px">🧵</div>No products yet!</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-panel" id="tab-gallery">
+      <div style="background:var(--maroon-soft);border:1px solid var(--border);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1.5rem;font-size:13px;color:var(--muted)">
+        📸 <strong style="color:var(--text)">Gallery tip:</strong> Product photos appear automatically. Upload extra showcase photos below — they appear in the home gallery.
+      </div>
+      <div class="gallery-grid" id="admin-gallery-wrap"></div>
+    </div>
+
+    <div class="tab-panel" id="tab-settings">
+      <div style="background:linear-gradient(135deg,#fff8f0,#fff0f3);border:1.5px solid var(--gold);border-radius:14px;padding:1.25rem;margin-bottom:1.5rem">
+        <div style="font-weight:600;font-size:14px;color:var(--maroon-deep);margin-bottom:6px;display:flex;align-items:center;gap:8px">📧 How order emails work</div>
+        <div style="font-size:13px;color:var(--muted);line-height:1.6">When a customer places an order, their Name, Phone, Products and Payment method are emailed to you via <strong>EmailJS</strong> — free, no server needed. Set up once below.</div>
+      </div>
+      <div class="settings-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem">
+        <div class="settings-card" style="background:var(--white);border:1px solid var(--border);border-radius:18px;padding:1.5rem">
+          <div class="stg-title" style="font-size:15px;font-weight:600;margin-bottom:.5rem;display:flex;align-items:center;gap:8px">📧 EmailJS Setup</div>
+          <div class="stg-desc" style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:1rem">Sign up free at <a href="https://emailjs.com" target="_blank" style="color:var(--maroon);font-weight:600">emailjs.com</a> then fill in below.</div>
+          <div style="margin-bottom:1rem">
+            <div class="step-item" style="display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.5"><span class="step-num" style="width:22px;height:22px;border-radius:50%;background:var(--maroon-soft);color:var(--maroon);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">1</span><span>emailjs.com → Sign up → Add Email Service (Gmail)</span></div>
+            <div class="step-item" style="display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.5"><span class="step-num" style="width:22px;height:22px;border-radius:50%;background:var(--maroon-soft);color:var(--maroon);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">2</span><span>Create Template using: order_id, customer_name, phone, products, payment_method, total, address</span></div>
+            <div class="step-item" style="display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.5"><span class="step-num" style="width:22px;height:22px;border-radius:50%;background:var(--maroon-soft);color:var(--maroon);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">3</span><span>Copy your Public Key, Service ID, Template ID below</span></div>
+          </div>
+          <label class="stg-label" style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:5px;margin-top:10px">Public Key</label><input class="stg-input" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;background:var(--ivory);outline:none;transition:border .2s;color:var(--text)" type="text" id="ejs-pubkey" placeholder="user_XXXXXXXXX">
+          <label class="stg-label" style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:5px;margin-top:10px">Service ID</label><input class="stg-input" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;background:var(--ivory);outline:none;transition:border .2s;color:var(--text)" type="text" id="ejs-service" placeholder="service_xxxxxxx">
+          <label class="stg-label" style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:5px;margin-top:10px">Template ID</label><input class="stg-input" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;background:var(--ivory);outline:none;transition:border .2s;color:var(--text)" type="text" id="ejs-template" placeholder="template_xxxxxxx">
+          <button class="stg-btn" style="margin-top:10px;background:var(--maroon);color:#fff;border:none;padding:9px 22px;border-radius:50px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;font-weight:500" onclick="saveEmailJS()">Save Email Settings</button>
+          <button class="stg-btn" style="margin-top:10px;background:var(--gold);color:var(--maroon-deep);margin-left:8px;border:none;padding:9px 22px;border-radius:50px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;font-weight:500" onclick="testEmail()">Send Test Email</button>
+          <div class="stg-status warn" style="font-size:12px;margin-top:7px;font-weight:500;padding:6px 12px;border-radius:8px;display:inline-block;background:#fff3cd;color:#856404" id="ejs-status">Not configured — orders saved locally only</div>
+        </div>
+        <div class="settings-card" style="background:var(--white);border:1px solid var(--border);border-radius:18px;padding:1.5rem">
+          <div class="stg-title" style="font-size:15px;font-weight:600;margin-bottom:.5rem;display:flex;align-items:center;gap:8px">💳 Razorpay Setup</div>
+          <div class="stg-desc" style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:1rem">Sign up at <a href="https://razorpay.com" target="_blank" style="color:var(--maroon);font-weight:600">razorpay.com</a> to accept UPI, card and net banking.</div>
+          <div style="margin-bottom:1rem">
+            <div class="step-item" style="display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.5"><span class="step-num" style="width:22px;height:22px;border-radius:50%;background:var(--maroon-soft);color:var(--maroon);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">1</span><span>razorpay.com → Sign up → Complete KYC</span></div>
+            <div class="step-item" style="display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.5"><span class="step-num" style="width:22px;height:22px;border-radius:50%;background:var(--maroon-soft);color:var(--maroon);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">2</span><span>Dashboard → Settings → API Keys → Generate</span></div>
+            <div class="step-item" style="display:flex;gap:10px;align-items:flex-start;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.5"><span class="step-num" style="width:22px;height:22px;border-radius:50%;background:var(--maroon-soft);color:var(--maroon);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px">3</span><span>Paste Key ID below (starts with rzp_live_ or rzp_test_)</span></div>
+          </div>
+          <label class="stg-label" style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:5px;margin-top:10px">Razorpay Key ID</label><input class="stg-input" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;background:var(--ivory);outline:none;transition:border .2s;color:var(--text)" type="text" id="rzp-key" placeholder="rzp_live_XXXXXXXXXXXX">
+          <button class="stg-btn" style="margin-top:10px;background:var(--maroon);color:#fff;border:none;padding:9px 22px;border-radius:50px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;font-weight:500" onclick="saveRzpKey()">Save Key</button>
+          <div class="stg-status warn" style="font-size:12px;margin-top:7px;font-weight:500;padding:6px 12px;border-radius:8px;display:inline-block;background:#fff3cd;color:#856404" id="rzp-key-status">Not set — using demo mode</div>
+          <div style="margin-top:1rem;padding:10px 12px;background:#fff3cd;border-radius:10px;font-size:12px;color:#856404">🧪 Test Card: 4111 1111 1111 1111 · Any future expiry · Any CVV</div>
+        </div>
+        <div class="settings-card" style="background:var(--white);border:1px solid var(--border);border-radius:18px;padding:1.5rem">
+          <div class="stg-title" style="font-size:15px;font-weight:600;margin-bottom:.5rem;display:flex;align-items:center;gap:8px">🏪 Store Info</div>
+          <label class="stg-label" style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:5px;margin-top:10px">Owner Email (receives orders)</label><input class="stg-input" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;background:var(--ivory);outline:none;transition:border .2s;color:var(--text)" type="email" id="owner-email" placeholder="amarjeet@gmail.com">
+          <label class="stg-label" style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:5px;margin-top:10px">Store Phone</label><input class="stg-input" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;background:var(--ivory);outline:none;transition:border .2s;color:var(--text)" type="text" id="store-phone" value="+91-7015910228">
+          <label class="stg-label" style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:5px;margin-top:10px">Store Address</label><input class="stg-input" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;background:var(--ivory);outline:none;transition:border .2s;color:var(--text)" type="text" id="store-addr" value="Tohana Road, Ratia, Haryana - 125051">
+          <label class="stg-label" style="display:block;font-size:11px;text-transform:uppercase;letter-spacing:.7px;color:var(--muted);font-weight:500;margin-bottom:5px;margin-top:10px">Admin Password</label><input class="stg-input" style="width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:'Outfit',sans-serif;background:var(--ivory);outline:none;transition:border .2s;color:var(--text)" type="password" id="new-password" placeholder="Change admin password">
+          <button class="stg-btn" style="margin-top:10px;background:var(--maroon);color:#fff;border:none;padding:9px 22px;border-radius:50px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;font-weight:500" onclick="saveStoreInfo()">Save Info</button>
+          <div class="stg-status ok" style="font-size:12px;margin-top:7px;font-weight:500;padding:6px 12px;border-radius:8px;display:none;background:var(--green-soft);color:var(--green)" id="store-status">Saved!</div>
+        </div>
+        <div class="settings-card" style="background:var(--white);border:1px solid var(--border);border-radius:18px;padding:1.5rem">
+          <div class="stg-title" style="font-size:15px;font-weight:600;margin-bottom:.5rem;display:flex;align-items:center;gap:8px">📋 Email Template</div>
+          <div class="stg-desc" style="font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:1rem">Copy and use as your EmailJS template body:</div>
+          <pre style="background:var(--ivory);border:1px solid var(--border);border-radius:10px;padding:1rem;font-size:11.5px;color:var(--text);line-height:1.7;overflow-x:auto;white-space:pre-wrap;word-break:break-all;margin-bottom:8px">New Order — Patiala Fashion!
+
+Order: {{order_id}}
+Date: {{order_date}}
+
+CUSTOMER:
+Name: {{customer_name}}
+Phone: {{phone}}
+Email: {{customer_email}}
+Address: {{address}}
+
+PRODUCTS:
+{{products}}
+
+PAYMENT:
+Method: {{payment_method}}
+Total: {{total}}</pre>
+          <button class="stg-btn" style="margin-top:10px;background:var(--maroon);color:#fff;border:none;padding:9px 22px;border-radius:50px;font-size:13px;cursor:pointer;font-family:'Outfit',sans-serif;transition:background .2s;font-weight:500" onclick="copyTemplate()">📋 Copy Template</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="fn">Patiala Fashion</div>
+  <p>Tohana Road · Ratia, Haryana — 125051</p>
+  <p>📞 <a href="tel:+917015910228" style="color:var(--gold)">+91-7015910228</a></p>
+  <p style="margin-top:8px;font-size:11px;opacity:.4">© 2025 Patiala Fashion · Women's Punjabi Suits Specialist</p>
+</footer>
+<a class="wa-btn" href="https://wa.me/917015910228?text=Hello%20Patiala%20Fashion!" target="_blank">💬</a>
+<div class="toast" id="toast"></div>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+const ADMIN_PASSWORD = 'Amarjeet2026';
+
+/* ── SUPABASE CLOUD DATABASE CONNECTION ── */
+const supabaseUrl = 'https://vuhzlvkcelcllzcafscs.supabase.co';
+const supabaseKey = 'sb_publishable_mZ-e2rfYMLFeczTiM-0U8A_u5LAkijU';
+const supabaseClient = window.supabase.createClient(supabaseUrl, supabaseKey);
+
+/* ── DEMO DATA ── */
+const DEMO_ORDERS = [
+  { id:'PF-DEMO001', name:'Priya Sharma', phone:'+91-98765-43210', email:'priya@gmail.com',
+    address:'H.No 12, Model Town, Ludhiana, Punjab, PIN: 141002',
+    products:['Phulkari Anarkali Set x2 = Rs.3,598','Silk Dupatta x1 = Rs.599'],
+    paymentMethod:'UPI / QR Code', razorpayId:'pay_demo001',
+    total:4197, sub:4197, delivery:0, status:'Delivered', date:'12 Jun 2025', timestamp:1718150000000, isDemo:true },
+  { id:'PF-DEMO002', name:'Sunita Devi', phone:'+91-97654-32109', email:'',
+    address:'Village Jhajjar, Haryana, PIN: 124103',
+    products:['Patiala Salwar Set x1 = Rs.1,799'],
+    paymentMethod:'Debit / Credit Card', razorpayId:'pay_demo002',
+    total:1799, sub:1799, delivery:0, status:'Shipped', date:'15 Jun 2025', timestamp:1718400000000, isDemo:true },
+  { id:'PF-DEMO003', name:'Kavita Rani', phone:'+91-96543-21098', email:'kavita@gmail.com',
+    address:'B-45 Rohini Sector 7, Delhi, PIN: 110085',
+    products:['Bridal Lehenga Suit x1 = Rs.8,999'],
+    paymentMethod:'Net Banking - HDFC Bank', razorpayId:'pay_demo003',
+    total:8999, sub:8999, delivery:0, status:'Confirmed', date:'17 Jun 2025', timestamp:1718600000000, isDemo:true },
+  { id:'PF-DEMO004', name:'Manpreet Kaur', phone:'+91-95432-10987', email:'manpreet@gmail.com',
+    address:'Street No 3, Amritsar, Punjab, PIN: 143001',
+    products:['Cotton Kurti Set x2 = Rs.1,398','Phulkari Dupatta x1 = Rs.799'],
+    paymentMethod:'UPI / QR Code', razorpayId:'pay_demo004',
+    total:2197, sub:2197, delivery:0, status:'New', date:'19 Jun 2025', timestamp:1718800000000, isDemo:true },
+  { id:'PF-DEMO005', name:'Reena Gupta', phone:'+91-94321-09876', email:'reena@gmail.com',
+    address:'Sec 22, Chandigarh, PIN: 160022',
+    products:['Silk Anarkali x1 = Rs.2,499'],
+    paymentMethod:'UPI / QR Code', razorpayId:'pay_demo005',
+    total:2499, sub:2400, delivery:99, status:'New', date:'20 Jun 2025', timestamp:1718900000000, isDemo:true }
+];
+
+/* ── STATE ── */
+var isAdmin = false;
+var products = [];
+var cart = {};
+var wishlist = new Set();
+var orders = []; 
+var currentImg = null;
+var currentFilter = 'All';
+var currentSort = 'newest';
+var searchQuery = '';
+var selectedPayMethod = 'upi';
+var checkoutData = {};
+var orderSearchQuery = '';
+var orderStatusFilter = 'all';
+var activeReviewProductId = null;
+var pendingStars = 0;
+var galleryImages = JSON.parse(localStorage.getItem('pf_gallery') || '[]');
+
+/* ── CONFIG ── */
+var emailJSConfig = JSON.parse(localStorage.getItem('pf_ejs') || '{}');
+var razorpayKey = localStorage.getItem('pf_rzp_key') || '';
+var storeInfo = JSON.parse(localStorage.getItem('pf_store') || '{"email":"","phone":"+91-7015910228","address":"Tohana Road, Ratia, Haryana - 125051"}');
+
+function getDisplayOrders() {
+  if (orders.length === 0 && !localStorage.getItem('pf_demo_cleared')) return DEMO_ORDERS;
+  return orders;
+}
+
+function initEmailJS() {
+  if (emailJSConfig.pubkey) { try { emailjs.init(emailJSConfig.pubkey); } catch(e) {} }
+}
+initEmailJS();
+
+/* ── MOBILE MENU ── */
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+  document.getElementById('hamburger').classList.toggle('open');
+}
+function closeMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('hamburger').classList.remove('open');
+}
+
+/* ── PAGES ── */
+function goPage(id) {
+  if (id === 'admin' && !isAdmin) { openAdminLogin(); return; }
+  document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
+  document.getElementById('pg-' + id).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(function(l) { l.classList.remove('active'); });
+  var nl = document.getElementById('nl-' + id);
+  if (nl) nl.classList.add('active');
+  if (id === 'cart') renderCart();
+  if (id === 'shop') renderShop();
+  if (id === 'home') renderFeatured();
+  if (id === 'admin') { renderDashboard(); loadSettings(); }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  closeMenu();
+}
+
+/* ── DASHBOARD TABS ── */
+function switchTab(name, el) {
+  document.querySelectorAll('.dash-tab').forEach(function(t) { t.classList.remove('active'); });
+  document.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+  el.classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+  if (name === 'orders') renderOrdersTable();
+  if (name === 'gallery') renderAdminGallery();
+}
+
+/* ── ADMIN LOGIN ── */
+function openAdminLogin() {
+  if (isAdmin) { goPage('admin'); return; }
+  document.getElementById('login-modal').classList.add('open');
+  document.getElementById('login-error').style.display = 'none';
+  document.getElementById('admin-pass').value = '';
+  setTimeout(function() { document.getElementById('admin-pass').focus(); }, 150);
+}
+function closeAdminLogin() { document.getElementById('login-modal').classList.remove('open'); }
+function modalOutside(e) { if (e.target.id === 'login-modal') closeAdminLogin(); }
+function doLogin() {
+  var pass = document.getElementById('admin-pass').value;
+  if (pass === ADMIN_PASSWORD) {
+    isAdmin = true;
+    closeAdminLogin();
+    document.getElementById('admin-bar').classList.add('show');
+    goPage('admin');
+    showToast('Welcome, Amarjeet! 🔓');
+  } else {
+    document.getElementById('login-error').style.display = 'block';
+    document.getElementById('admin-pass').value = '';
+    document.getElementById('admin-pass').focus();
+    var m = document.querySelector('.login-modal');
+    m.style.animation = 'none'; m.offsetHeight; m.style.animation = 'shake .3s ease';
+  }
+}
+function logoutAdmin() {
+  isAdmin = false;
+  document.getElementById('admin-bar').classList.remove('show');
+  goPage('home');
+  showToast('Logged out successfully');
+}
+
+/* ── MODAL HELPERS ── */
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+function closeOrderModal() { document.getElementById('order-modal').classList.remove('open'); }
+
+/* ── PRODUCT CARDS ── */
+function makeCard(p) {
+  var disc = p.mrp > p.price ? Math.round((p.mrp - p.price) / p.mrp * 100) : 0;
+  var imgHtml = p.img
+    ? '<img src="' + p.img + '" alt="' + p.name + '" loading="lazy">'
+    : '<div class="product-img-placeholder"><span class="placeholder-icon">👘</span><span class="placeholder-text">No photo</span></div>';
+  var badge = p.badge ? '<span class="p-badge badge-' + p.badge + '">' + p.badge + '</span>' : '';
+  var discHtml = disc > 0 ? '<span class="p-discount">' + disc + '% off</span>' : '';
+  var mrpHtml = p.mrp > p.price ? '<span class="p-mrp">Rs.' + Number(p.mrp).toLocaleString('en-IN') + '</span>' : '';
+  var sizesHtml = p.sizes
+    ? '<div style="font-size:11px;color:var(--muted);margin-bottom:6px;font-weight:300">Size: ' + p.sizes
+      + ' &nbsp;<span style="color:var(--maroon);cursor:pointer;font-weight:500" onclick="event.stopPropagation();openSizeGuide()">Size Guide</span></div>'
+    : '';
+  var liked = wishlist.has(p.id);
+  var inCart = cart[p.id] > 0;
+  var reviews = p.reviews || [];
+  var avgRating = reviews.length ? (reviews.reduce(function(s,r){return s+r.rating;},0)/reviews.length).toFixed(1) : null;
+  var starsFilled = avgRating ? Math.round(avgRating) : 0;
+  var starsEmpty = 5 - starsFilled;
+  var starsStr = '';
+  for(var i=0;i<starsFilled;i++) starsStr += '★';
+  for(var j=0;j<starsEmpty;j++) starsStr += '☆';
+  var ratingHtml = avgRating
+    ? '<div class="p-stars"><span class="stars-display">' + starsStr + '</span><span class="review-count">' + avgRating + ' (' + reviews.length + ')</span></div>'
+    : '<div class="p-stars"><span class="stars-display" style="color:#ddd">☆☆☆☆☆</span>&nbsp;<span class="review-count" style="cursor:pointer;color:var(--maroon)" onclick="event.stopPropagation();openReviews(' + p.id + ')">Be first to review</span></div>';
+  var waMsg = encodeURIComponent('Hello Patiala Fashion! I am interested in ' + p.name + ' (Rs.' + Number(p.price).toLocaleString('en-IN') + '). Please share details.');
+  var addBtnText = inCart ? 'In Cart (' + cart[p.id] + ') ✓' : 'Add to Cart 🛒';
+  var addBtnClass = 'p-add-btn' + (inCart ? ' in-cart' : '');
+  var wishBtnClass = 'p-wishlist' + (liked ? ' liked' : '');
+  var wishIcon = liked ? '♥' : '♡';
+
+  return '<div class="product-card" onclick="openLightbox(' + p.id + ')">'
+    + '<div class="product-img-wrap">' + imgHtml + badge
+    + '<button class="' + wishBtnClass + '" id="wl-' + p.id + '" onclick="event.stopPropagation();toggleWishlist(' + p.id + ')">' + wishIcon + '</button>'
+    + '</div>'
+    + '<div class="product-body">'
+    + '<div class="p-category">' + p.cat + '</div>'
+    + '<div class="p-name">' + p.name + '</div>'
+    + '<div class="p-desc">' + (p.desc||'') + '</div>'
+    + ratingHtml
+    + sizesHtml
+    + '<div class="p-price-row"><span class="p-price">Rs.' + Number(p.price).toLocaleString('en-IN') + '</span>' + mrpHtml + discHtml + '</div>'
+    + '<button class="' + addBtnClass + '" onclick="event.stopPropagation();addToCart(' + p.id + ')">' + addBtnText + '</button>'
+    + '<a class="p-wa-btn" href="https://wa.me/917015910228?text=' + waMsg + '" target="_blank" onclick="event.stopPropagation()">💬 WhatsApp to Order</a>'
+    + '<div style="text-align:center;margin-top:6px"><span style="font-size:11px;color:var(--muted);cursor:pointer" onclick="event.stopPropagation();openReviews(' + p.id + ')">⭐ Reviews (' + reviews.length + ')</span></div>'
+    + '</div></div>';
+}
+
+function renderFeatured() {
+  var g = document.getElementById('featured-grid');
+  var list = products.slice(-6).reverse();
+  g.innerHTML = list.length
+    ? list.map(makeCard).join('')
+    : '<div style="grid-column:1/-1;text-align:center;padding:2.5rem;color:var(--muted)"><div style="font-size:48px;margin-bottom:1rem">👘</div><p>No suits yet. <strong style="color:var(--maroon);cursor:pointer" onclick="openAdminLogin()">Login as owner</strong> to add products.</p></div>';
+  document.getElementById('stat-count').textContent = products.length;
+  renderHomeGallery();
+}
+
+function renderShop() {
+  var list = products.slice();
+  if (currentFilter !== 'All') list = list.filter(function(p){ return p.cat === currentFilter; });
+  if (searchQuery) {
+    var q = searchQuery.toLowerCase();
+    list = list.filter(function(p){ return p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q) || (p.desc && p.desc.toLowerCase().includes(q)); });
+  }
+  if (currentSort === 'low') list.sort(function(a,b){ return a.price-b.price; });
+  else if (currentSort === 'high') list.sort(function(a,b){ return b.price-a.price; });
+  else list.reverse();
+  document.getElementById('shop-grid').innerHTML = list.map(makeCard).join('');
+  document.getElementById('empty-shop').style.display = list.length ? 'none' : 'block';
+  document.getElementById('grid-count').textContent = list.length + ' suit' + (list.length !== 1 ? 's' : '') + ' found';
+}
+
+function setFilter(f, el) {
+  currentFilter = f;
+  document.querySelectorAll('.filter-chip').forEach(function(c){ c.classList.remove('active'); });
+  el.classList.add('active');
+  renderShop();
+}
+function sortProducts(v) { currentSort = v; renderShop(); }
+function handleSearch(val) {
+  searchQuery = val.trim();
+  document.getElementById('search-clear').classList.toggle('show', searchQuery.length > 0);
+  renderShop();
+}
+function clearSearch() {
+  document.getElementById('search-input').value = '';
+  searchQuery = '';
+  document.getElementById('search-clear').classList.remove('show');
+  renderShop();
+}
+function toggleWishlist(id) {
+  if (wishlist.has(id)) wishlist.delete(id); else wishlist.add(id);
+  var liked = wishlist.has(id);
+  var btn = document.getElementById('wl-' + id);
+  if (btn) { btn.textContent = liked ? '♥' : '♡'; btn.classList.toggle('liked', liked); }
+  showToast(liked ? 'Added to wishlist ♥' : 'Removed from wishlist');
+}
+
+/* ── CART ── */
+function addToCart(id) {
+  cart[id] = (cart[id]||0) + 1;
+  updateDot();
+  showToast('Added to cart 🛒');
+  renderShop(); renderFeatured();
+}
+function updateDot() {
+  var total = Object.values(cart).reduce(function(a,b){return a+b;},0);
+  document.getElementById('cart-dot').textContent = total;
+  var btn = document.querySelector('.cart-btn');
+  btn.style.animation = 'none'; btn.offsetHeight; btn.style.animation = 'cartBounce .3s ease';
+}
+function renderCart() {
+  var keys = Object.keys(cart).filter(function(id){ return cart[id] > 0; });
+  var body = document.getElementById('cart-body');
+  document.getElementById('cart-sub').textContent = keys.length ? keys.length + ' item' + (keys.length>1?'s':'') + ' in your cart' : '';
+  if (!keys.length) {
+    body.innerHTML = '<div class="empty-cart"><span style="font-size:64px;display:block;margin-bottom:1.25rem">🛍</span>'
+      + '<h3 style="font-family:\'Cormorant Garamond\',serif;font-size:1.6rem;color:var(--text);margin-bottom:.5rem">Your cart is empty</h3>'
+      + '<p style="font-weight:300;font-size:14px">Explore our beautiful Punjabi suits</p><br>'
+      + '<button class="btn-gold" style="margin-top:1rem" onclick="goPage(\'shop\')">Shop Now</button></div>';
+    return;
+  }
+  var sub = 0;
+  var html = keys.map(function(id) {
+    var p = products.find(function(x){ return x.id == id; });
+    if (!p) return '';
+    sub += p.price * cart[id];
+    var imgHtml = p.img
+      ? '<div class="ci-img"><img src="' + p.img + '" alt="' + p.name + '"></div>'
+      : '<div class="ci-img">👘</div>';
+    return '<div class="cart-item">' + imgHtml
+      + '<div style="flex:1;min-width:0">'
+      + '<div class="ci-name">' + p.name + '</div>'
+      + '<div class="ci-sub">' + p.cat + ' · Rs.' + Number(p.price).toLocaleString('en-IN') + ' each</div>'
+      + '<div class="qty-ctrl">'
+      + '<button class="qty-btn" onclick="chgQty(' + id + ',-1)">−</button>'
+      + '<span class="qty-num">' + cart[id] + '</span>'
+      + '<button class="qty-btn" onclick="chgQty(' + id + ',1)">+</button>'
+      + '</div></div>'
+      + '<div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;flex-shrink:0">'
+      + '<span class="ci-price">Rs.' + (p.price * cart[id]).toLocaleString('en-IN') + '</span>'
+      + '<button class="rm-btn" onclick="rmCart(' + id + ')">🗑</button>'
+      + '</div></div>';
+  }).join('');
+  var del = sub >= 1550 ? 0 : 99;
+  var total = sub + del;
+  html += '<div class="cart-summary-box">'
+    + '<div class="cs-row"><span>Subtotal</span><span>Rs.' + sub.toLocaleString('en-IN') + '</span></div>'
+    + '<div class="cs-row"><span>Delivery</span><span style="color:' + (del===0?'#1e6640':'inherit') + '">' + (del===0?'FREE ✓':'Rs.'+del) + '</span></div>'
+    + (del===0?'<div style="font-size:11px;color:#1e6640;padding:2px 0 7px;border-bottom:1px solid var(--border)">You saved Rs.99 on delivery!</div>':'')
+    + '<div class="cs-row cs-total"><span>Total</span><span>Rs.' + total.toLocaleString('en-IN') + '</span></div>'
+    + '<button class="checkout-btn" onclick="prepCheckout(' + total + ',' + sub + ',' + del + ')">Proceed to Checkout</button>'
+    + '</div>';
+  body.innerHTML = html;
+}
+function chgQty(id, d) {
+  cart[id] = Math.max(0,(cart[id]||0)+d);
+  if (!cart[id]) delete cart[id];
+  updateDot(); renderCart();
+}
+function rmCart(id) { delete cart[id]; updateDot(); renderCart(); showToast('Item removed'); }
+
+/* ── CHECKOUT ── */
+function prepCheckout(total, sub, del) {
+  checkoutData = { total:total, sub:sub, del:del };
+  var keys = Object.keys(cart).filter(function(id){ return cart[id] > 0; });
+  var summaryHtml = keys.map(function(id) {
+    var p = products.find(function(x){ return x.id == id; });
+    if (!p) return '';
+    return '<div class="cs-item-row"><span>' + p.name + ' x' + cart[id] + '</span><span>Rs.' + (p.price*cart[id]).toLocaleString('en-IN') + '</span></div>';
+  }).join('');
+  summaryHtml += '<div class="cs-item-row"><span>Delivery</span><span>' + (del===0?'FREE':'Rs.'+del) + '</span></div>';
+  summaryHtml += '<div class="cs-item-row total-row"><span>Total to Pay</span><span>Rs.' + total.toLocaleString('en-IN') + '</span></div>';
+  document.getElementById('checkout-order-summary').innerHTML = '<div class="checkout-summary">' + summaryHtml + '</div>';
+  var pt = document.getElementById('place-btn-text');
+  if (pt) pt.textContent = 'Pay Rs.' + total.toLocaleString('en-IN') + ' via Razorpay';
+  goPage('checkout');
+}
+
+function selPay(method) {
+  selectedPayMethod = method;
+  ['upi','card','nb'].forEach(function(m) {
+    document.getElementById('pm-'+m).classList.toggle('sel', m===method);
+    var ex = document.getElementById('extra-'+m);
+    if (ex) ex.classList.toggle('show', m===method);
+  });
+}
+function setUpi(suffix) { document.getElementById('upi-id').value = suffix; document.getElementById('upi-id').focus(); }
+function fmtCard(el) { var v=el.value.replace(/\D/g,'').substring(0,16); el.value=v.replace(/(.{4})/g,'$1 ').trim(); }
+function fmtExpiry(el) { var v=el.value.replace(/\D/g,'').substring(0,4); if(v.length>=2) v=v.substring(0,2)+' / '+v.substring(2); el.value=v; }
+
+function collectCustomerData() {
+  var name = document.getElementById('co-name').value.trim();
+  var phone = document.getElementById('co-phone').value.trim();
+  if (!name) { showToast('Please enter your full name'); document.getElementById('co-name').focus(); return null; }
+  if (!phone || phone.replace(/\D/g,'').length < 10) { showToast('Please enter a valid phone number'); document.getElementById('co-phone').focus(); return null; }
+  var email = document.getElementById('co-email').value.trim();
+  var addr = document.getElementById('co-addr').value.trim();
+  var city = document.getElementById('co-city').value.trim();
+  var pin = document.getElementById('co-pin').value.trim();
+  var address = [addr, city, pin ? 'PIN: '+pin : ''].filter(Boolean).join(', ') || 'Ratia, Haryana';
+  var keys = Object.keys(cart).filter(function(id){ return cart[id] > 0; });
+  var productsList = keys.map(function(id) {
+    var p = products.find(function(x){ return x.id == id; });
+    return p ? p.name + ' (' + p.cat + ') x' + cart[id] + ' = Rs.' + (p.price*cart[id]).toLocaleString('en-IN') : '';
+  }).filter(Boolean);
+  return { name:name, phone:phone, email:email, address:address, productsList:productsList };
+}
+
+function placeOrder() {
+  var data = collectCustomerData();
+  if (!data) return;
+  if (typeof Razorpay === 'undefined') { showToast('Payment gateway not loaded. Check internet.'); return; }
+  var activeKey = razorpayKey || 'rzp_test_placeholder';
+  var btn = document.getElementById('place-order-btn');
+  if (btn) {
+    btn.disabled = true;
+    btn.innerHTML = '<span class="rzp-logo-badge">R</span><span>Opening payment...</span>';
+  }
+  var payMethodLabel = { upi:'UPI / QR Code', card:'Debit / Credit Card', nb:'Net Banking' }[selectedPayMethod] || selectedPayMethod;
+  var options = {
+    key: activeKey,
+    amount: checkoutData.total * 100,
+    currency: 'INR',
+    name: 'Patiala Fashion',
+    description: 'Punjabi Suits',
+    prefill: { name: data.name, email: data.email || '', contact: data.phone.replace(/\D/g,'').slice(-10) },
+    notes: { address: data.address },
+    theme: { color: '#7b1c35' },
+    handler: function(response) {
+      var payLabel = payMethodLabel + ' (ID: ' + (response.razorpay_payment_id || 'demo') + ')';
+      finaliseOrder(data.name, data.phone, data.email, data.address, data.productsList, payLabel, response.razorpay_payment_id);
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = '<span class="rzp-logo-badge">R</span><span id="place-btn-text">Pay via Razorpay</span>';
+      }
+    },
+    modal: {
+      ondismiss: function() {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = '<span class="rzp-logo-badge">R</span><span id="place-btn-text">Pay Rs.' + checkoutData.total.toLocaleString('en-IN') + ' via Razorpay</span>';
+        }
+        showToast('Payment cancelled');
+      }
+    }
+  };
+  try {
+    var rzp = new Razorpay(options);
+    rzp.on('payment.failed', function(resp) {
+      showToast('Payment failed: ' + (resp.error.description || 'Please try again'));
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = '<span class="rzp-logo-badge">R</span><span id="place-btn-text">Retry Payment</span>';
+      }
+    });
+    rzp.open();
+  } catch(err) {
+    showToast('Could not open payment. Set your Razorpay Key in Admin Settings.');
+    if (btn) {
+      btn.disabled = false;
+      btn.innerHTML = '<span class="rzp-logo-badge">R</span><span id="place-btn-text">Pay via Razorpay</span>';
+    }
+  }
+}
+
+/* ── CLOUD ORDER FUNCTIONS ── */
+async function finaliseOrder(name, phone, email, address, productsList, payMethodLabel, razorpayId) {
+  var orderId = 'PF-' + Date.now().toString(36).toUpperCase();
+  var dateStr = new Date().toLocaleDateString('en-IN', {day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+  
+  var newOrder = {
+    id: orderId,
+    customer_name: name,
+    phone: phone,
+    email: email,
+    address: address,
+    products: productsList,
+    payment_method: payMethodLabel,
+    razorpay_id: razorpayId || null,
+    total: checkoutData.total,
+    sub: checkoutData.sub,
+    delivery: checkoutData.del,
+    status: 'New',
+    order_date: dateStr
+  };
+
+  try {
+    showToast('Saving order securely... ⏳');
+    
+    const { error } = await supabaseClient.from('orders').insert([newOrder]);
+    if (error) throw error;
+
+    orders.unshift({
+      id: orderId, name: name, phone: phone, email: email, address: address,
+      products: productsList, paymentMethod: payMethodLabel, razorpayId: razorpayId || null,
+      total: checkoutData.total, sub: checkoutData.sub, delivery: checkoutData.del,
+      status: 'New', date: dateStr
+    });
+
+    await sendOrderEmail(orders[0]);
+    
+    document.getElementById('success-order-id').textContent = 'Order ID: ' + orderId;
+    document.getElementById('success-pay-method').textContent = 'Payment: ' + payMethodLabel;
+    goPage('success');
+  } catch (err) {
+    console.error("Cloud Error:", err);
+    showToast('Something went wrong saving the order.');
+  }
+}
+
+async function sendOrderEmail(order) {
+  if (!emailJSConfig.pubkey || !emailJSConfig.service || !emailJSConfig.template) {
+    showToast('Order saved! Set up EmailJS in Admin Settings to get email alerts.');
+    return;
+  }
+  try {
+    await emailjs.send(emailJSConfig.service, emailJSConfig.template, {
+      order_id: order.id, order_date: order.date,
+      customer_name: order.name, phone: order.phone,
+      customer_email: order.email || 'Not provided',
+      address: order.address,
+      products: order.products.join('\n'),
+      payment_method: order.paymentMethod,
+      total: 'Rs.' + order.total.toLocaleString('en-IN'),
+      to_email: storeInfo.email || ''
+    });
+    showToast('Order placed & email sent! ✉');
+  } catch(e) {
+    showToast('Order saved! Email failed — check EmailJS settings.');
+  }
+}
+
+function resetCart() {
+  cart = {}; updateDot();
+  var pt = document.getElementById('place-btn-text');
+  if (pt) pt.textContent = 'Pay via Razorpay';
+}
+
+/* ── DASHBOARD ── */
+function renderDashboard() { renderStatsRow(); renderOrdersTable(); updateOrdersBadge(); }
+
+function renderStatsRow() {
+  var displayOrders = getDisplayOrders();
+  var isDemo = orders.length === 0 && !localStorage.getItem('pf_demo_cleared');
+  var total = displayOrders.length;
+  var revenue = displayOrders.filter(function(o){return o.status!=='Cancelled';}).reduce(function(s,o){return s+o.total;},0);
+  var newOrders = displayOrders.filter(function(o){return o.status==='New';}).length;
+  var delivered = displayOrders.filter(function(o){return o.status==='Delivered';}).length;
+  var demoBanner = isDemo
+    ? '<div style="grid-column:1/-1;background:#fff3cd;border:1px solid #f9c74f;border-radius:12px;padding:10px 14px;font-size:13px;color:#856404;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px">'
+      + '<span>📊 <strong>Demo data shown</strong> — real orders appear here when customers buy</span>'
+      + '<button onclick="clearDemoData()" style="background:#856404;color:#fff;border:none;padding:5px 14px;border-radius:50px;font-size:12px;cursor:pointer;font-family:Outfit,sans-serif">Clear Demo</button></div>'
+    : '';
+  document.getElementById('stats-row').innerHTML = demoBanner
+    + '<div class="stat-card"><div class="sc-label">Total Orders</div><div class="sc-value">' + total + '</div><div class="sc-sub">' + (isDemo?'Sample data':'All time') + '</div></div>'
+    + '<div class="stat-card"><div class="sc-label">Revenue</div><div class="sc-value green">Rs.' + revenue.toLocaleString('en-IN') + '</div><div class="sc-sub">Excl. cancelled</div></div>'
+    + '<div class="stat-card"><div class="sc-label">New Orders</div><div class="sc-value gold">' + newOrders + '</div><div class="sc-sub">Need attention</div></div>'
+    + '<div class="stat-card"><div class="sc-label">Delivered</div><div class="sc-value">' + delivered + '</div><div class="sc-sub">Completed</div></div>'
+    + '<div class="stat-card"><div class="sc-label">Products</div><div class="sc-value">' + products.length + '</div><div class="sc-sub">In store</div></div>';
+}
+
+function clearDemoData() {
+  if (confirm('Hide demo data? Real orders will show automatically.')) {
+    localStorage.setItem('pf_demo_cleared','1');
+    renderDashboard();
+    showToast('Demo data cleared. Ready for real orders!');
+  }
+}
+
+function updateOrdersBadge() {
+  var n = getDisplayOrders().filter(function(o){return o.status==='New';}).length;
+  document.getElementById('orders-badge').textContent = n;
+}
+
+function renderOrdersTable() {
+  var list = getDisplayOrders().slice();
+  if (orderSearchQuery) {
+    var q = orderSearchQuery.toLowerCase();
+    list = list.filter(function(o){
+      return o.id.toLowerCase().includes(q) || o.name.toLowerCase().includes(q) || (o.phone||'').includes(q);
+    });
+  }
+  if (orderStatusFilter !== 'all') list = list.filter(function(o){ return o.status === orderStatusFilter; });
+  var tbody = document.getElementById('orders-tbody');
+  var noDiv = document.getElementById('no-orders');
+  if (!list.length) { tbody.innerHTML=''; noDiv.style.display='block'; return; }
+  noDiv.style.display = 'none';
+  var statusMap = {New:'s-new',Confirmed:'s-confirmed',Shipped:'s-shipped',Delivered:'s-delivered',Cancelled:'s-cancelled'};
+  tbody.innerHTML = list.map(function(o) {
+    var sc = statusMap[o.status] || 's-new';
+    var prods = o.products || [];
+    var ps = prods.length ? prods[0].substring(0,38) + (prods.length>1?' +'+( prods.length-1)+' more':'') : '—';
+    var demoTag = o.isDemo ? ' <span style="background:#fff3cd;color:#856404;font-size:10px;font-weight:600;padding:1px 6px;border-radius:4px">DEMO</span>' : '';
+    var delBtn = o.isDemo ? '' : '<button class="tbl-btn red" onclick="deleteOrder(\''+o.id+'\')">🗑</button>';
+    return '<tr>'
+      + '<td><span style="font-family:monospace;font-size:12px;color:var(--maroon);font-weight:600">' + o.id + '</span>' + demoTag + '</td>'
+      + '<td><div style="font-weight:500">' + o.name + '</div><div style="font-size:11px;color:var(--muted)">' + (o.email||'') + '</div></td>'
+      + '<td><a href="tel:' + o.phone + '" style="color:var(--maroon);font-weight:500">' + o.phone + '</a></td>'
+      + '<td style="max-width:180px"><div style="font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + ps + '</div></td>'
+      + '<td><span style="font-size:12px;color:var(--muted)">' + o.paymentMethod + '</span></td>'
+      + '<td><strong style="color:var(--maroon)">Rs.' + (o.total||0).toLocaleString('en-IN') + '</strong></td>'
+      + '<td><span class="status-badge ' + sc + '">' + o.status + '</span></td>'
+      + '<td><span style="font-size:12px;color:var(--muted);white-space:nowrap">' + o.date + '</span></td>'
+      + '<td style="white-space:nowrap"><button class="tbl-btn" onclick="viewOrder(\'' + o.id + '\')">👁 View</button> ' + delBtn + '</td>'
+      + '</tr>';
+  }).join('');
+}
+
+function filterOrders(val) { orderSearchQuery = val.trim(); renderOrdersTable(); }
+function filterOrdersByStatus(val) { orderStatusFilter = val; renderOrdersTable(); }
+
+function viewOrder(id) {
+  var o = getDisplayOrders().find(function(x){return x.id===id;});
+  if (!o) return;
+  var sc = {New:'s-new',Confirmed:'s-confirmed',Shipped:'s-shipped',Delivered:'s-delivered',Cancelled:'s-cancelled'}[o.status]||'s-new';
+  var prods = o.products || [];
+  var prodsHtml = prods.map(function(p){
+    var parts = p.split('=');
+    return '<div class="om-product-chip"><span>' + (parts[0]||p) + '</span><span style="color:var(--maroon);font-weight:600">' + (parts[1]||'') + '</span></div>';
+  }).join('') || '<div style="font-size:13px;color:var(--muted)">No product info</div>';
+  var demoNote = o.isDemo ? '<div style="background:#fff3cd;border-radius:8px;padding:8px 12px;font-size:12px;color:#856404;margin-bottom:1rem">📊 Demo order — for preview only</div>' : '';
+  var rzpRow = o.razorpayId ? '<div class="om-row"><span>Razorpay ID</span><span style="font-family:monospace;font-size:12px;color:var(--green)">' + o.razorpayId + '</span></div>' : '';
+  var statusControls = o.isDemo ? '' :
+    '<div class="om-section"><div class="om-title">Update Status</div>'
+    + '<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">'
+    + '<select class="status-sel" id="modal-status-sel"><option ' + (o.status==='New'?'selected':'') + '>New</option><option ' + (o.status==='Confirmed'?'selected':'') + '>Confirmed</option><option ' + (o.status==='Shipped'?'selected':'') + '>Shipped</option><option ' + (o.status==='Delivered'?'selected':'') + '>Delivered</option><option ' + (o.status==='Cancelled'?'selected':'') + '>Cancelled</option></select>'
+    + '<button class="update-btn" onclick="updateOrderStatus(\'' + o.id + '\')">Update</button>'
+    + '<a href="https://wa.me/' + (o.phone||'').replace(/\D/g,'').slice(-10) + '?text=Hello%20' + encodeURIComponent(o.name) + '%2C%20your%20order%20' + o.id + '%20from%20Patiala%20Fashion%20is%20confirmed!" target="_blank" style="display:inline-block;background:#25d366;color:#fff;padding:9px 16px;border-radius:50px;font-size:13px;text-decoration:none;font-weight:500">💬 WhatsApp</a>'
+    + '</div></div>';
+  document.getElementById('order-modal-content').innerHTML =
+    '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;padding-right:2rem">'
+    + '<div><div style="font-family:\'Cormorant Garamond\',serif;font-size:1.4rem;font-weight:700">Order Details</div>'
+    + '<div style="font-family:monospace;font-size:13px;color:var(--maroon);margin-top:2px">' + o.id + '</div></div>'
+    + '<span class="status-badge ' + sc + '">' + o.status + '</span></div>'
+    + demoNote
+    + '<div class="om-section"><div class="om-title">Customer Information</div>'
+    + '<div class="om-row"><span>Name</span><span>' + o.name + '</span></div>'
+    + '<div class="om-row"><span>Phone</span><span><a href="tel:' + o.phone + '" style="color:var(--maroon);font-weight:600">' + o.phone + '</a></span></div>'
+    + '<div class="om-row"><span>Email</span><span>' + (o.email||'—') + '</span></div>'
+    + '<div class="om-row"><span>Address</span><span>' + (o.address||'—') + '</span></div></div>'
+    + '<div class="om-section"><div class="om-title">Products Ordered</div>' + prodsHtml + '</div>'
+    + '<div class="om-section"><div class="om-title">Payment</div>'
+    + '<div class="om-row"><span>Method</span><span>' + o.paymentMethod + '</span></div>'
+    + rzpRow
+    + '<div class="om-row"><span>Subtotal</span><span>Rs.' + (o.sub||0).toLocaleString('en-IN') + '</span></div>'
+    + '<div class="om-row"><span>Delivery</span><span>' + (o.delivery===0?'FREE':'Rs.'+(o.delivery||0)) + '</span></div>'
+    + '<div class="om-row" style="font-family:\'Cormorant Garamond\',serif;font-size:1.1rem;font-weight:700;color:var(--maroon)"><span>Total</span><span>Rs.' + (o.total||0).toLocaleString('en-IN') + '</span></div></div>'
+    + statusControls;
+  document.getElementById('order-modal').classList.add('open');
+}
+
+async function updateOrderStatus(id) {
+  var sel = document.getElementById('modal-status-sel');
+  if (!sel) return;
+  var newStatus = sel.value;
+  
+  try {
+    const { error } = await supabaseClient.from('orders').update({ status: newStatus }).eq('id', id);
+    if (error) throw error;
+    
+    var idx = orders.findIndex(function(o){return o.id===id;});
+    if (idx > -1) {
+      orders[idx].status = newStatus;
+    }
+    
+    renderOrdersTable(); renderStatsRow(); updateOrdersBadge();
+    closeOrderModal();
+    showToast('Status updated to: ' + newStatus + ' ☁️');
+  } catch(err) {
+    console.error(err);
+    showToast('Failed to update cloud status');
+  }
+}
+
+async function deleteOrder(id) {
+  if (!confirm('Delete this order permanently?')) return;
+  
+  try {
+    const { error } = await supabaseClient.from('orders').delete().eq('id', id);
+    if (error) throw error;
+
+    orders = orders.filter(function(o){return o.id!==id;});
+    renderDashboard();
+    showToast('Order deleted from cloud ☁️');
+  } catch(err) {
+    console.error(err);
+    showToast('Failed to delete order');
+  }
+}
+
+function exportOrders() {
+  var list = getDisplayOrders().filter(function(o){return !o.isDemo;});
+  if (!list.length) { showToast('No real orders to export yet'); return; }
+  var rows = [['Order ID','Name','Phone','Email','Address','Products','Payment','Total','Status','Date']];
+  list.forEach(function(o){
+    rows.push([o.id,o.name,o.phone,o.email||'',o.address,(o.products||[]).join(' | '),o.paymentMethod,'Rs.'+(o.total||0),o.status,o.date]);
+  });
+  var csv = rows.map(function(r){return r.map(function(c){return '"'+String(c).replace(/"/g,'""')+'"';}).join(',');}).join('\n');
+  var blob = new Blob([csv],{type:'text/csv'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a'); a.href=url; a.download='PatialaFashion_Orders.csv'; a.click();
+  URL.revokeObjectURL(url);
+  showToast('Exported!');
+}
+
+/* ── REVIEWS ── */
+function openReviews(pid) {
+  activeReviewProductId = pid;
+  pendingStars = 0;
+  renderReviewModal(pid);
+  document.getElementById('review-modal').classList.add('open');
+}
+function renderReviewModal(pid) {
+  var p = products.find(function(x){return x.id==pid;}); if (!p) return;
+  var reviews = p.reviews || [];
+  var avg = reviews.length ? (reviews.reduce(function(s,r){return s+r.rating;},0)/reviews.length).toFixed(1) : null;
+  var avgN = avg ? Math.round(avg) : 0;
+  var starsStr = '';
+  for(var i=0;i<avgN;i++) starsStr+='★';
+  for(var j=0;j<5-avgN;j++) starsStr+='☆';
+  var revHtml = reviews.length ? reviews.map(function(r){
+    var rs=''; for(var i=0;i<r.rating;i++) rs+='★'; for(var j=0;j<5-r.rating;j++) rs+='☆';
+    return '<div class="review-item"><div class="ri-header"><span class="ri-name">'+r.name+'</span><span class="ri-date">'+r.date+'</span></div>'
+      +'<div class="ri-stars">'+rs+'</div><div class="ri-text">'+r.text+'</div><div class="ri-verified">✓ Verified Buyer</div></div>';
+  }).join('') : '<div style="text-align:center;padding:1.5rem;color:var(--muted);font-size:14px">No reviews yet — be the first!</div>';
+  document.getElementById('review-modal-content').innerHTML =
+    '<div style="padding-right:2rem;margin-bottom:1.25rem">'
+    +'<div style="font-family:\'Cormorant Garamond\',serif;font-size:1.3rem;font-weight:700">'+p.name+'</div>'
+    +'<div style="display:flex;align-items:center;gap:6px;margin-top:4px">'
+    +'<span style="color:var(--gold);font-size:16px">'+starsStr+'</span>'
+    +(avg?'<span style="font-weight:600;font-size:14px">'+avg+'</span>':'')
+    +'<span style="color:var(--muted);font-size:13px">('+reviews.length+' review'+(reviews.length!==1?'s':'')+')</span>'
+    +'</div></div>'
+    +'<div style="background:var(--ivory);border:1px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1.25rem">'
+    +'<div style="font-size:13px;font-weight:600;margin-bottom:10px">Write a Review</div>'
+    +'<div style="font-size:12px;color:var(--muted);margin-bottom:6px">Your Rating</div>'
+    +'<div class="star-picker" id="star-picker">'
+    +'<span onclick="setStars(1)">★</span><span onclick="setStars(2)">★</span><span onclick="setStars(3)">★</span><span onclick="setStars(4)">★</span><span onclick="setStars(5)">★</span>'
+    +'</div>'
+    +'<input type="text" id="review-name" placeholder="Your name" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:Outfit,sans-serif;margin-bottom:8px;outline:none;background:var(--white);color:var(--text)">'
+    +'<textarea id="review-text" placeholder="Share your experience..." style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:10px;font-size:13px;font-family:Outfit,sans-serif;resize:vertical;min-height:70px;outline:none;background:var(--white);color:var(--text)"></textarea>'
+    +'<button onclick="submitReview()" style="margin-top:8px;background:var(--maroon);color:#fff;border:none;padding:9px 22px;border-radius:50px;font-size:13px;cursor:pointer;font-family:Outfit,sans-serif;font-weight:500">Submit Review</button>'
+    +'</div>'
+    +'<div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--text)">Customer Reviews</div>'
+    + revHtml;
+}
+function setStars(n) {
+  pendingStars = n;
+  var stars = document.querySelectorAll('#star-picker span');
+  stars.forEach(function(s,i){ s.classList.toggle('on', i < n); });
+}
+function submitReview() {
+  var name = document.getElementById('review-name').value.trim();
+  var text = document.getElementById('review-text').value.trim();
+  if (!name) { showToast('Please enter your name'); return; }
+  if (!pendingStars) { showToast('Please select a star rating'); return; }
+  if (!text) { showToast('Please write your review'); return; }
+  var p = products.find(function(x){return x.id==activeReviewProductId;}); if (!p) return;
+  if (!p.reviews) p.reviews = [];
+  p.reviews.unshift({ name:name, rating:pendingStars, text:text,
+    date: new Date().toLocaleDateString('en-IN',{day:'2-digit',month:'short',year:'numeric'}) });
+  showToast('Review submitted! Thank you ⭐');
+  renderReviewModal(activeReviewProductId);
+  renderShop(); renderFeatured();
+}
+
+/* ── SIZE GUIDE ── */
+function openSizeGuide() { document.getElementById('size-modal').classList.add('open'); }
+function switchSizeTab(tab, el) {
+  ['suit','dupatta','measure'].forEach(function(t){
+    document.getElementById('size-tab-'+t).style.display = t===tab?'block':'none';
+  });
+  document.querySelectorAll('.size-tab').forEach(function(b){ b.classList.remove('active'); });
+  el.classList.add('active');
+}
+
+/* ── LIGHTBOX ── */
+function openLightbox(pid) {
+  var p = products.find(function(x){return x.id==pid;}); if (!p || !p.img) return;
+  document.getElementById('lb-img').src = p.img;
+  document.getElementById('lb-name').textContent = p.name + ' — ' + p.cat;
+  document.getElementById('lb-price').textContent = 'Rs.' + Number(p.price).toLocaleString('en-IN');
+  document.getElementById('lb-cart-btn').style.display = 'inline-flex';
+  document.getElementById('lb-cart-btn').onclick = function(){ addToCart(pid); closeLightbox(); };
+  var waMsg = encodeURIComponent('Hello Patiala Fashion! I am interested in ' + p.name + ' (Rs.' + Number(p.price).toLocaleString('en-IN') + ').');
+  document.getElementById('lb-wa-btn').onclick = function(){ window.open('https://wa.me/917015910228?text='+waMsg,'_blank'); };
+  document.getElementById('lightbox').classList.add('open');
+}
+function closeLightbox() { document.getElementById('lightbox').classList.remove('open'); }
+
+/* ── GALLERY ── */
+function renderHomeGallery() {
+  var g = document.getElementById('home-gallery-grid'); if (!g) return;
+  var productImgs = products.filter(function(p){return !!p.img;}).slice(0,8);
+  var extraImgs = galleryImages.slice(0, Math.max(0, 12 - productImgs.length));
+  var html = '';
+  productImgs.forEach(function(p) {
+    html += '<div class="gallery-item" onclick="openLightbox('+p.id+')">'
+      +'<img src="'+p.img+'" alt="'+p.name+'" loading="lazy">'
+      +'<div class="gallery-overlay">'
+      +'<div class="gallery-overlay-name">'+p.name+'</div>'
+      +'<div class="gallery-overlay-price">Rs.'+Number(p.price).toLocaleString('en-IN')+'</div>'
+      +'<div style="font-size:12px;color:rgba(255,255,255,.75);margin-top:2px">Tap to shop</div>'
+      +'</div></div>';
+  });
+  extraImgs.forEach(function(img, i) {
+    html += '<div class="gallery-item" onclick="openGalleryImg(\''+img.url+'\',\''+((img.caption||'').replace(/'/g,''))+'\''+')">'
+      +'<img src="'+img.url+'" alt="' + (img.caption||'Gallery') + '" loading="lazy">'
+      +'<div class="gallery-overlay"><div class="gallery-overlay-name">'+(img.caption||'Patiala Fashion')+'</div></div>'
+      +'</div>';
+  });
+  if (!html) html = '<div style="grid-column:1/-1;text-align:center;padding:3rem;color:var(--muted)"><div style="font-size:48px;margin-bottom:1rem">📸</div><p>Gallery fills up as you add products with photos!</p></div>';
+  g.innerHTML = html;
+}
+function openGalleryImg(url, caption) {
+  document.getElementById('lb-img').src = url;
+  document.getElementById('lb-name').textContent = caption || 'Patiala Fashion';
+  document.getElementById('lb-price').textContent = '';
+  document.getElementById('lb-cart-btn').style.display = 'none';
+  document.getElementById('lb-wa-btn').onclick = function(){ window.open('https://wa.me/917015910228?text=Hello%20Patiala%20Fashion!%20I%20love%20this%20outfit%20from%20your%20gallery!','_blank'); };
+  document.getElementById('lightbox').classList.add('open');
+}
+function renderAdminGallery() {
+  var wrap = document.getElementById('admin-gallery-wrap'); if (!wrap) return;
+  var html = galleryImages.map(function(img, i){
+    return '<div style="position:relative;aspect-ratio:1;border-radius:10px;overflow:hidden;background:var(--maroon-soft)">'
+      +'<img src="'+img.url+'" style="width:100%;height:100%;object-fit:cover">'
+      +'<button onclick="deleteGalleryImg('+i+')" style="position:absolute;top:4px;right:4px;background:rgba(0,0,0,.6);color:#fff;border:none;width:22px;height:22px;border-radius:50%;font-size:12px;cursor:pointer">✕</button>'
+      +'</div>';
+  }).join('');
+  html += '<div class="gallery-add-zone"><input type="file" accept="image/*" onchange="addGalleryImg(this)"><div style="pointer-events:none;font-size:28px;color:var(--muted)">+<div style="font-size:11px;margin-top:4px">Add Photo</div></div></div>';
+  wrap.innerHTML = html;
+}
+function addGalleryImg(input) {
+  if (!input.files || !input.files[0]) return;
+  var caption = prompt('Caption for this photo (optional):') || '';
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    galleryImages.push({ url: e.target.result, caption: caption });
+    localStorage.setItem('pf_gallery', JSON.stringify(galleryImages));
+    renderAdminGallery(); renderHomeGallery();
+    showToast('Gallery photo added!');
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+function deleteGalleryImg(i) {
+  galleryImages.splice(i, 1);
+  localStorage.setItem('pf_gallery', JSON.stringify(galleryImages));
+  renderAdminGallery(); renderHomeGallery();
+  showToast('Photo removed');
+}
+
+/* ── CLOUD STORAGE PRODUCT ADD ── */
+async function addProduct() {
+  const name = document.getElementById('a-name').value.trim();
+  const price = parseFloat(document.getElementById('a-price').value);
+  const mrp = parseFloat(document.getElementById('a-mrp').value) || price;
+  const fileInput = document.getElementById('img-input');
+  const file = fileInput.files[0];
+
+  if (!name || !price) {
+    showToast('Please enter name and price');
+    return;
+  }
+
+  showToast('Uploading to Storage... ⏳');
+
+  try {
+    let finalImageUrl = '';
+
+    // 1. Upload actual file to Supabase Storage
+    if (file) {
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${Date.now()}.${fileExt}`; // Unique filename
+      const filePath = fileName;
+
+      const { data: uploadData, error: uploadError } = await supabaseClient
+        .storage
+        .from('product-images')
+        .upload(filePath, file);
+
+      if (uploadError) throw uploadError;
+
+      // 2. Get the Public URL for that file
+      const { data: urlData } = supabaseClient
+        .storage
+        .from('product-images')
+        .getPublicUrl(filePath);
+
+      finalImageUrl = urlData.publicUrl;
+    }
+
+    // 3. Save the link in your Database
+    const { error: dbError } = await supabaseClient.from('products').insert([{
+      name: name,
+      category: document.getElementById('a-cat').value,
+      description: document.getElementById('a-desc').value.trim(),
+      price: price,
+      mrp: mrp,
+      badge: document.getElementById('a-badge').value,
+      sizes: document.getElementById('a-sizes').value.trim(),
+      image_url: finalImageUrl 
+    }]);
+
+    if (dbError) throw dbError;
+
+    showToast('Success! Suit is live ☁️✓');
+    
+    // Reset Form
+    ['a-name','a-price','a-mrp','a-desc','a-sizes'].forEach(id => {
+        const el = document.getElementById(id);
+        if(el) el.value = '';
+    });
+    document.getElementById('preview-img').style.display = 'none';
+    fileInput.value = '';
+    loadProductsFromCloud();
+
+  } catch (err) {
+    console.error("Storage Error:", err);
+    showToast('Upload failed. Check Storage Policies.');
+  }
+}
+
+function renderAdminTable() {
+  var tbody = document.getElementById('admin-table');
+  var em = document.getElementById('admin-empty');
+  document.getElementById('prod-count-label').textContent = products.length + ' product' + (products.length!==1?'s':'');
+  if (!products.length) { tbody.innerHTML=''; em.style.display='block'; return; }
+  em.style.display = 'none';
+  tbody.innerHTML = products.map(function(p) {
+    var img = p.img
+      ? '<img src="'+p.img+'" style="width:40px;height:40px;border-radius:8px;object-fit:cover">'
+      : '<div style="width:40px;height:40px;border-radius:8px;background:var(--maroon-soft);display:flex;align-items:center;justify-content:center;font-size:18px">👘</div>';
+    return '<tr><td>'+img+'</td>'
+      +'<td><div style="font-weight:500;max-width:130px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">'+p.name+'</div></td>'
+      +'<td><span style="background:var(--maroon-soft);color:var(--maroon);padding:2px 8px;border-radius:50px;font-size:10px">'+p.cat+'</span></td>'
+      +'<td><strong style="color:var(--maroon)">Rs.'+Number(p.price).toLocaleString('en-IN')+'</strong></td>'
+      +'<td><button class="del-btn" onclick="delProduct('+p.id+')">✕</button></td></tr>';
+  }).join('');
+}
+
+async function delProduct(id) {
+  if (!confirm('Delete this product from the cloud forever?')) return;
+  
+  try {
+    const { error } = await supabaseClient.from('products').delete().eq('id', id);
+    if (error) throw error;
+
+    delete cart[id];
+    updateDot();
+    showToast('Product removed from cloud ☁️');
+    
+    loadProductsFromCloud();
+
+  } catch (err) {
+    console.error("Error deleting:", err);
+    showToast('Failed to delete product.');
+  }
+}
+
+/* ── SETTINGS ── */
+function loadSettings() {
+  if (emailJSConfig.pubkey) document.getElementById('ejs-pubkey').value = emailJSConfig.pubkey;
+  if (emailJSConfig.service) document.getElementById('ejs-service').value = emailJSConfig.service;
+  if (emailJSConfig.template) document.getElementById('ejs-template').value = emailJSConfig.template;
+  updateEjsStatus();
+  if (razorpayKey) { document.getElementById('rzp-key').value = razorpayKey; updateRzpStatus(); }
+  if (storeInfo.email) document.getElementById('owner-email').value = storeInfo.email;
+  if (storeInfo.phone) document.getElementById('store-phone').value = storeInfo.phone;
+  if (storeInfo.address) document.getElementById('store-addr').value = storeInfo.address;
+}
+function saveEmailJS() {
+  var pk=document.getElementById('ejs-pubkey').value.trim();
+  var sv=document.getElementById('ejs-service').value.trim();
+  var tm=document.getElementById('ejs-template').value.trim();
+  if (!pk||!sv||!tm) { showToast('Please fill all 3 EmailJS fields'); return; }
+  emailJSConfig = { pubkey:pk, service:sv, template:tm };
+  localStorage.setItem('pf_ejs', JSON.stringify(emailJSConfig));
+  try { emailjs.init(pk); } catch(e) {}
+  updateEjsStatus();
+  showToast('EmailJS settings saved!');
+}
+async function testEmail() {
+  if (!emailJSConfig.pubkey) { showToast('Please save EmailJS settings first'); return; }
+  var testOrder = { id:'PF-TEST', date:new Date().toLocaleDateString('en-IN'), name:'Test Customer',
+    phone:'+91-7015910228', email:storeInfo.email||'', address:'Ratia, Haryana',
+    products:['Phulkari Suit x1 = Rs.1,499'], paymentMethod:'UPI', total:1499, sub:1400, delivery:99 };
+  showToast('Sending test email...');
+  await sendOrderEmail(testOrder);
+}
+function updateEjsStatus() {
+  var el = document.getElementById('ejs-status');
+  if (emailJSConfig.pubkey && emailJSConfig.service && emailJSConfig.template) {
+    el.className='stg-status ok'; el.textContent='✓ EmailJS configured — orders will be emailed';
+  } else {
+    el.className='stg-status warn'; el.textContent='⚠ Not configured — orders saved locally only';
+  }
+}
+function saveRzpKey() {
+  var key = document.getElementById('rzp-key').value.trim();
+  if (!key || (!key.startsWith('rzp_live_') && !key.startsWith('rzp_test_'))) { showToast('Enter a valid Razorpay Key ID'); return; }
+  razorpayKey = key;
+  localStorage.setItem('pf_rzp_key', key);
+  updateRzpStatus();
+  showToast('Razorpay key saved!');
+}
+function updateRzpStatus() {
+  var el = document.getElementById('rzp-key-status');
+  if (razorpayKey) { el.className='stg-status ok'; el.textContent='✓ Key saved: '+razorpayKey.substring(0,22)+'...'; }
+  else { el.className='stg-status warn'; el.textContent='⚠ Not set — using demo mode'; }
+}
+function saveStoreInfo() {
+  storeInfo = {
+    email: document.getElementById('owner-email').value.trim(),
+    phone: document.getElementById('store-phone').value.trim(),
+    address: document.getElementById('store-addr').value.trim()
+  };
+  localStorage.setItem('pf_store', JSON.stringify(storeInfo));
+  var st = document.getElementById('store-status');
+  st.style.display = 'inline-block';
+  showToast('Store info saved!');
+  setTimeout(function(){ st.style.display='none'; }, 3000);
+}
+function copyTemplate() {
+  var tmpl = 'New Order!\nOrder ID: {{order_id}}\nDate: {{order_date}}\n\nCustomer: {{customer_name}}\nPhone: {{phone}}\nEmail: {{customer_email}}\nAddress: {{address}}\n\nProducts:\n{{products}}\n\nPayment: {{payment_method}}\nTotal: {{total}}';
+  navigator.clipboard.writeText(tmpl).then(function(){ showToast('Template copied!'); }).catch(function(){ showToast('Copy manually from the box'); });
+}
+
+/* ── DRAG & DROP ── */
+function previewImage(input) {
+  if (!input.files || !input.files[0]) return;
+  if (input.files[0].size > 5*1024*1024) { showToast('Image too large. Max 5MB'); return; }
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    currentImg = e.target.result;
+    var prev = document.getElementById('preview-img');
+    prev.src = currentImg; prev.style.display = 'block';
+  };
+  reader.readAsDataURL(input.files[0]);
+}
+
+var uz = document.getElementById('upload-zone');
+uz.addEventListener('dragover', function(e){ e.preventDefault(); uz.classList.add('drag'); });
+uz.addEventListener('dragleave', function(){ uz.classList.remove('drag'); });
+uz.addEventListener('drop', function(e){
+  e.preventDefault(); uz.classList.remove('drag');
+  if (e.dataTransfer.files[0]) { document.getElementById('img-input').files=e.dataTransfer.files; previewImage(document.getElementById('img-input')); }
+});
+
+/* ── TOAST ── */
+function showToast(msg) {
+  var t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(t._t);
+  t._t = setTimeout(function(){ t.classList.remove('show'); }, 2800);
+}
+
+/* ── KEYBOARD ── */
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') { closeAdminLogin(); closeMenu(); closeOrderModal(); closeLightbox(); closeModal('review-modal'); closeModal('size-modal'); }
+});
+
+/* ── FETCH CLOUD DATA (PRODUCTS AND ORDERS) ── */
+async function loadProductsFromCloud() {
+  try {
+    const { data, error } = await supabaseClient
+      .from('products')
+      .select('*')
+      .order('id', { ascending: false });
+
+    if (error) throw error;
+
+    if (data) {
+      products = data.map(p => ({ ...p, img: p.image_url })); 
+      renderFeatured(); 
+      renderShop();     
+      if (isAdmin) renderAdminTable(); 
+      var sc = document.getElementById('stat-count');
+      if (sc) sc.textContent = products.length;
+    }
+  } catch (err) {
+    console.error("Error loading products:", err);
+  }
+}
+
+async function loadOrdersFromCloud() {
+  try {
+    const { data, error } = await supabaseClient
+      .from('orders')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) throw error;
+
+    if (data && data.length > 0) {
+      orders = data.map(o => ({
+        id: o.id, name: o.customer_name, phone: o.phone, email: o.email, address: o.address,
+        products: o.products, paymentMethod: o.payment_method, razorpayId: o.razorpay_id,
+        total: o.total, sub: o.sub, delivery: o.delivery, status: o.status, date: o.order_date, isDemo: false
+      }));
+    }
+    if (isAdmin) renderDashboard();
+  } catch (err) {
+    console.error("Error loading orders:", err);
+  }
+}
+
+/* ── INIT ── */
+loadProductsFromCloud();
+loadOrdersFromCloud();
+
+</script>
+</body>
+</html>
